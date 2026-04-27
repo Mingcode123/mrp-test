@@ -1,22 +1,36 @@
 library(tidyverse)
+library(sampling)
 
 set.seed(123)
 
-# Settings
-B = 100
-sample_prop = 0.10
+B = 50
 
 if (!dir.exists("results")) dir.create("results", recursive = TRUE)
 
-# Data
 hps_population = read_rds("data/data_clean/hps_week1_population.rds")
 
 states = levels(hps_population$state)
+if (is.null(states)) states = sort(unique(as.character(hps_population$state)))
 
 hps_population = hps_population %>%
-  mutate(state = factor(state, levels = states))
+  mutate(
+    state = factor(state, levels = states),
+    pps_size = log(PWEIGHT)+2*(y==0)
+  )
 
-# Sample ids
+if (any(is.na(hps_population$pps_size))) stop("Missing pps_size")
+if (any(hps_population$pps_size<=0)) stop("Non-positive pps_size")
+
+n_sample = round(nrow(hps_population)/15)
+
+pik = inclusionprobabilities(hps_population$pps_size, n_sample)
+
+hps_population = hps_population %>%
+  mutate(
+    pik = pik,
+    sun_w = 1/pik
+  )
+
 hps_sample_ids = list()
 
 for (b in 1:B) {
@@ -25,15 +39,16 @@ for (b in 1:B) {
   
   set.seed(123+b)
   
-  hps_sample = hps_population %>%
-    group_by(state) %>%
-    slice_sample(prop = sample_prop) %>%
-    ungroup()
+  sample_ind = UPmidzuno(hps_population$pik)
   
-  hps_sample_ids[[b]] = hps_sample %>%
+  hps_sample_ids[[b]] = hps_population %>%
+    filter(sample_ind==1) %>%
     transmute(
       replication = b,
-      SCRAM
+      SCRAM,
+      pik,
+      sun_w,
+      pps_size
     )
 }
 

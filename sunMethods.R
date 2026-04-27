@@ -7,7 +7,6 @@ options(mc.cores = detectCores(logical = FALSE))
 
 set.seed(123)
 
-# Settings
 B = 10
 rep_start = 1
 rep_end = B
@@ -16,22 +15,26 @@ chains = 2
 iter = 2000
 warmup = 250
 
-truth_type = "weighted"
-
 if (!dir.exists("results")) dir.create("results", recursive = TRUE)
 if (!dir.exists("results/ht")) dir.create("results/ht", recursive = TRUE)
 if (!dir.exists("results/nsb")) dir.create("results/nsb", recursive = TRUE)
 if (!dir.exists("results/sb")) dir.create("results/sb", recursive = TRUE)
 
-# Data
 hps_population = read_rds("data/data_clean/hps_week1_population.rds")
 poststrat_cells = read_rds("data/data_clean/hps_week1_poststrat_cells.rds")
 hps_sample_ids = read_rds("results/hps_sample_ids.rds")
 
 states = levels(hps_population$state)
+if (is.null(states)) states = sort(unique(as.character(hps_population$state)))
+
 age_levels = levels(hps_population$age_group)
+if (is.null(age_levels)) age_levels = sort(unique(as.character(hps_population$age_group)))
+
 sex_levels = levels(hps_population$sex)
+if (is.null(sex_levels)) sex_levels = sort(unique(as.character(hps_population$sex)))
+
 race_levels = levels(hps_population$race_eth)
+if (is.null(race_levels)) race_levels = sort(unique(as.character(hps_population$race_eth)))
 
 hps_population = hps_population %>%
   mutate(
@@ -47,27 +50,23 @@ poststrat_cells = poststrat_cells %>%
     age_group = factor(age_group, levels = age_levels),
     sex = factor(sex, levels = sex_levels),
     race_eth = factor(race_eth, levels = race_levels),
-    state_id = as.integer(state)
-  )
-
-if (truth_type=="weighted") {
-  poststrat_cells = poststrat_cells %>%
-    mutate(N_target = N_cell_w)
-} else {
-  poststrat_cells = poststrat_cells %>%
-    mutate(N_target = N_cell)
-}
-
-poststrat_cells = poststrat_cells %>%
+    state_id = as.integer(state),
+    N_target = N_cell
+  ) %>%
   filter(!is.na(N_target), N_target>0)
+
+state_pop_N = poststrat_cells %>%
+  group_by(state) %>%
+  summarise(
+    N_state = sum(N_target),
+    .groups = "drop"
+  )
 
 X_poststrat = model.matrix(~ age_group+sex+race_eth, data = poststrat_cells)
 
-# Stan models
 nsb_model = stan_model("stan/Binomial.stan")
 sb_model = stan_model("stan/Binomial_ICAR.stan")
 
-# State adjacency for spatial model
 state_edges = read_csv(
   "data/state_adjacency.csv",
   col_types = cols(
@@ -93,7 +92,6 @@ icar_edges = state_edges %>%
 target_reps = 1:B
 reps = target_reps[target_reps>=rep_start & target_reps<=rep_end]
 
-# HT
 for (b in reps) {
   
   if (!(b %in% hps_sample_ids$replication)) {
@@ -114,10 +112,10 @@ for (b in reps) {
   
   ids_b = hps_sample_ids %>%
     filter(replication==b) %>%
-    select(SCRAM)
+    select(SCRAM, pik, sun_w)
   
   hps_sample = hps_population %>%
-    semi_join(ids_b, by = "SCRAM") %>%
+    inner_join(ids_b, by = "SCRAM") %>%
     mutate(
       state = factor(state, levels = states),
       age_group = factor(age_group, levels = age_levels),
@@ -125,25 +123,20 @@ for (b in reps) {
       race_eth = factor(race_eth, levels = race_levels)
     )
   
-  if (truth_type=="weighted") {
-    ht_state_estimates = hps_sample %>%
-      group_by(state) %>%
-      summarise(
-        theta_hat = sum(PWEIGHT*y, na.rm = TRUE)/sum(PWEIGHT, na.rm = TRUE),
-        lower = NA_real_,
-        upper = NA_real_,
-        .groups = "drop"
-      )
-  } else {
-    ht_state_estimates = hps_sample %>%
-      group_by(state) %>%
-      summarise(
-        theta_hat = mean(y),
-        lower = NA_real_,
-        upper = NA_real_,
-        .groups = "drop"
-      )
-  }
+  ht_state_estimates = hps_sample %>%
+    group_by(state) %>%
+    summarise(
+      y_total_hat = sum(sun_w*y, na.rm = TRUE),
+      .groups = "drop"
+    ) %>%
+    right_join(state_pop_N, by = "state") %>%
+    mutate(
+      y_total_hat = replace_na(y_total_hat, 0),
+      theta_hat = y_total_hat/N_state,
+      lower = NA_real_,
+      upper = NA_real_
+    ) %>%
+    select(state, theta_hat, lower, upper)
   
   ht_estimates_b = ht_state_estimates %>%
     mutate(
@@ -167,7 +160,6 @@ for (b in reps) {
   write_csv(ht_estimates, "results/ht/estimates.csv")
 }
 
-# NSB
 for (b in reps) {
   
   if (!(b %in% hps_sample_ids$replication)) {
@@ -188,25 +180,18 @@ for (b in reps) {
   
   ids_b = hps_sample_ids %>%
     filter(replication==b) %>%
-    select(SCRAM)
+    select(SCRAM, pik, sun_w)
   
   hps_sample = hps_population %>%
-    semi_join(ids_b, by = "SCRAM") %>%
+    inner_join(ids_b, by = "SCRAM") %>%
     mutate(
       state = factor(state, levels = states),
       age_group = factor(age_group, levels = age_levels),
       sex = factor(sex, levels = sex_levels),
       race_eth = factor(race_eth, levels = race_levels),
-      state_id = as.integer(state)
+      state_id = as.integer(state),
+      model_w = length(sun_w)*sun_w/sum(sun_w)
     )
-  
-  if (truth_type=="weighted") {
-    hps_sample = hps_sample %>%
-      mutate(model_w = PWEIGHT/mean(PWEIGHT, na.rm = TRUE))
-  } else {
-    hps_sample = hps_sample %>%
-      mutate(model_w = 1)
-  }
   
   X_sample = model.matrix(~ age_group+sex+race_eth, data = hps_sample)
   
@@ -243,7 +228,7 @@ for (b in reps) {
     N_state = poststrat_cells$N_target[idx]
     
     eta = X_state %*% t(nsb_beta)
-    eta = sweep(eta,2,nsb_mu[,state_id],"+")
+    eta = sweep(eta, 2, nsb_mu[,state_id], "+")
     p = 1/(1+exp(-eta))
     theta_draw = as.numeric(t(N_state/sum(N_state)) %*% p)
     
@@ -252,8 +237,8 @@ for (b in reps) {
       tibble(
         state = factor(s, levels = states),
         theta_hat = mean(theta_draw),
-        lower = quantile(theta_draw,0.025),
-        upper = quantile(theta_draw,0.975)
+        lower = quantile(theta_draw, 0.025),
+        upper = quantile(theta_draw, 0.975)
       )
     )
   }
@@ -282,7 +267,6 @@ for (b in reps) {
   write_csv(nsb_estimates, "results/nsb/estimates.csv")
 }
 
-# SB
 for (b in reps) {
   
   if (!(b %in% hps_sample_ids$replication)) {
@@ -303,25 +287,18 @@ for (b in reps) {
   
   ids_b = hps_sample_ids %>%
     filter(replication==b) %>%
-    select(SCRAM)
+    select(SCRAM, pik, sun_w)
   
   hps_sample = hps_population %>%
-    semi_join(ids_b, by = "SCRAM") %>%
+    inner_join(ids_b, by = "SCRAM") %>%
     mutate(
       state = factor(state, levels = states),
       age_group = factor(age_group, levels = age_levels),
       sex = factor(sex, levels = sex_levels),
       race_eth = factor(race_eth, levels = race_levels),
-      state_id = as.integer(state)
+      state_id = as.integer(state),
+      model_w = length(sun_w)*sun_w/sum(sun_w)
     )
-  
-  if (truth_type=="weighted") {
-    hps_sample = hps_sample %>%
-      mutate(model_w = PWEIGHT/mean(PWEIGHT, na.rm = TRUE))
-  } else {
-    hps_sample = hps_sample %>%
-      mutate(model_w = 1)
-  }
   
   X_sample = model.matrix(~ age_group+sex+race_eth, data = hps_sample)
   
@@ -363,7 +340,7 @@ for (b in reps) {
     N_state = poststrat_cells$N_target[idx]
     
     eta = X_state %*% t(sb_beta)
-    eta = sweep(eta,2,sb_mu[,state_id]+sb_sigma_phi*sb_phi[,state_id],"+")
+    eta = sweep(eta, 2, sb_mu[,state_id]+sb_sigma_phi*sb_phi[,state_id], "+")
     p = 1/(1+exp(-eta))
     theta_draw = as.numeric(t(N_state/sum(N_state)) %*% p)
     
@@ -372,8 +349,8 @@ for (b in reps) {
       tibble(
         state = factor(s, levels = states),
         theta_hat = mean(theta_draw),
-        lower = quantile(theta_draw,0.025),
-        upper = quantile(theta_draw,0.975)
+        lower = quantile(theta_draw, 0.025),
+        upper = quantile(theta_draw, 0.975)
       )
     )
   }
