@@ -1,0 +1,1184 @@
+nohup: ignoring input
+── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
+✔ dplyr     1.2.1     ✔ readr     2.2.0
+✔ forcats   1.0.1     ✔ stringr   1.6.0
+✔ ggplot2   4.0.3     ✔ tibble    3.3.1
+✔ lubridate 1.9.5     ✔ tidyr     1.3.2
+✔ purrr     1.2.2     
+── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+✖ dplyr::filter() masks stats::filter()
+✖ dplyr::lag()    masks stats::lag()
+ℹ Use the conflicted package (<http://conflicted.r-lib.org/>) to force all conflicts to become errors
+Loading required package: StanHeaders
+
+rstan version 2.32.7 (Stan version 2.32.2)
+
+For execution on a local, multicore CPU with excess RAM we recommend calling
+options(mc.cores = parallel::detectCores()).
+To avoid recompilation of unchanged Stan programs, we recommend calling
+rstan_options(auto_write = TRUE)
+For within-chain threading using `reduce_sum()` or `map_rect()` Stan functions,
+change `threads_per_chain` option:
+rstan_options(threads_per_chain = 1)
+
+
+Attaching package: ‘rstan’
+
+The following object is masked from ‘package:tidyr’:
+
+    extract
+
+Loading required package: Rcpp
+This is rstanarm version 2.32.1
+- See https://mc-stan.org/rstanarm/articles/priors for changes to default priors!
+- Default priors may change, so it's safest to specify priors, even if equivalent to the defaults.
+- For execution on a local, multicore CPU with excess RAM we recommend calling
+  options(mc.cores = parallel::detectCores())
+
+Attaching package: ‘rstanarm’
+
+The following object is masked from ‘package:rstan’:
+
+    loo
+
+Skipping MRP replication 1 : already in estimates
+Skipping MRP replication 2 : already in estimates
+Skipping MRP replication 3 : already in estimates
+Skipping MRP replication 4 : already in estimates
+Skipping MRP replication 5 : already in estimates
+Skipping MRP replication 6 : already in estimates
+Skipping MRP replication 7 : already in estimates
+Skipping MRP replication 8 : already in estimates
+Skipping MRP replication 9 : already in estimates
+Skipping MRP replication 10 : already in estimates
+Skipping MRP2 replication 1 : already in estimates
+Skipping MRP2 replication 2 : already in estimates
+Skipping MRP2 replication 3 : already in estimates
+Skipping MRP2 replication 4 : already in estimates
+Skipping MRP2 replication 5 : already in estimates
+Skipping MRP2 replication 6 : already in estimates
+Skipping MRP2 replication 7 : already in estimates
+Skipping MRP2 replication 8 : already in estimates
+Skipping MRP2 replication 9 : already in estimates
+Skipping MRP2 replication 10 : already in estimates
+Skipping MRP3 replication 1 : already in estimates
+Skipping MRP3 replication 2 : already in estimates
+Skipping MRP3 replication 3 : already in estimates
+Skipping MRP3 replication 4 : already in estimates
+Skipping MRP3 replication 5 : already in estimates
+Skipping MRP3 replication 6 : already in estimates
+Skipping MRP3 replication 7 : already in estimates
+Skipping MRP3 replication 8 : already in estimates
+Skipping MRP3 replication 9 : already in estimates
+Skipping MRP3 replication 10 : already in estimates
+MRP4 replication 1 
+
+SAMPLING FOR MODEL 'bernoulli' NOW (CHAIN 2).
+
+SAMPLING FOR MODEL 'bernoulli' NOW (CHAIN 1).
+Chain 2: 
+Chain 2: Gradient evaluation took 0.00598 seconds
+Chain 2: 1000 transitions using 10 leapfrog steps per transition would take 59.8 seconds.
+Chain 2: Adjust your expectations accordingly!
+Chain 2: 
+Chain 2: 
+Chain 1: 
+Chain 1: Gradient evaluation took 0.005272 seconds
+Chain 1: 1000 transitions using 10 leapfrog steps per transition would take 52.72 seconds.
+Chain 1: Adjust your expectations accordingly!
+Chain 1: 
+Chain 1: 
+Chain 1: Iteration:    1 / 2000 [  0%]  (Warmup)
+Chain 2: Iteration:    1 / 2000 [  0%]  (Warmup)
+Chain 2: Iteration:   50 / 2000 [  2%]  (Warmup)
+Chain 1: Iteration:   50 / 2000 [  2%]  (Warmup)
+Chain 2: Iteration:  100 / 2000 [  5%]  (Warmup)
+Chain 1: Iteration:  100 / 2000 [  5%]  (Warmup)
+Chain 2: Iteration:  150 / 2000 [  7%]  (Warmup)
+Chain 1: Iteration:  150 / 2000 [  7%]  (Warmup)
+Chain 2: Iteration:  200 / 2000 [ 10%]  (Warmup)
+Chain 1: Iteration:  200 / 2000 [ 10%]  (Warmup)
+Chain 1: Iteration:  250 / 2000 [ 12%]  (Warmup)
+Chain 1: Iteration:  251 / 2000 [ 12%]  (Sampling)
+Chain 2: Iteration:  250 / 2000 [ 12%]  (Warmup)
+Chain 2: Iteration:  251 / 2000 [ 12%]  (Sampling)
+Chain 1: Iteration:  300 / 2000 [ 15%]  (Sampling)
+Chain 2: Iteration:  300 / 2000 [ 15%]  (Sampling)
+Chain 1: Iteration:  350 / 2000 [ 17%]  (Sampling)
+Chain 1: Iteration:  400 / 2000 [ 20%]  (Sampling)
+Chain 1: Iteration:  450 / 2000 [ 22%]  (Sampling)
+Chain 2: Iteration:  350 / 2000 [ 17%]  (Sampling)
+Chain 1: Iteration:  500 / 2000 [ 25%]  (Sampling)
+Chain 1: Iteration:  550 / 2000 [ 27%]  (Sampling)
+Chain 2: Iteration:  400 / 2000 [ 20%]  (Sampling)
+Chain 1: Iteration:  600 / 2000 [ 30%]  (Sampling)
+Chain 1: Iteration:  650 / 2000 [ 32%]  (Sampling)
+Chain 2: Iteration:  450 / 2000 [ 22%]  (Sampling)
+Chain 1: Iteration:  700 / 2000 [ 35%]  (Sampling)
+Chain 1: Iteration:  750 / 2000 [ 37%]  (Sampling)
+Chain 2: Iteration:  500 / 2000 [ 25%]  (Sampling)
+Chain 1: Iteration:  800 / 2000 [ 40%]  (Sampling)
+Chain 1: Iteration:  850 / 2000 [ 42%]  (Sampling)
+Chain 2: Iteration:  550 / 2000 [ 27%]  (Sampling)
+Chain 1: Iteration:  900 / 2000 [ 45%]  (Sampling)
+Chain 1: Iteration:  950 / 2000 [ 47%]  (Sampling)
+Chain 2: Iteration:  600 / 2000 [ 30%]  (Sampling)
+Chain 1: Iteration: 1000 / 2000 [ 50%]  (Sampling)
+Chain 1: Iteration: 1050 / 2000 [ 52%]  (Sampling)
+Chain 2: Iteration:  650 / 2000 [ 32%]  (Sampling)
+Chain 1: Iteration: 1100 / 2000 [ 55%]  (Sampling)
+Chain 1: Iteration: 1150 / 2000 [ 57%]  (Sampling)
+Chain 2: Iteration:  700 / 2000 [ 35%]  (Sampling)
+Chain 1: Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Chain 1: Iteration: 1250 / 2000 [ 62%]  (Sampling)
+Chain 2: Iteration:  750 / 2000 [ 37%]  (Sampling)
+Chain 1: Iteration: 1300 / 2000 [ 65%]  (Sampling)
+Chain 1: Iteration: 1350 / 2000 [ 67%]  (Sampling)
+Chain 2: Iteration:  800 / 2000 [ 40%]  (Sampling)
+Chain 1: Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Chain 1: Iteration: 1450 / 2000 [ 72%]  (Sampling)
+Chain 2: Iteration:  850 / 2000 [ 42%]  (Sampling)
+Chain 1: Iteration: 1500 / 2000 [ 75%]  (Sampling)
+Chain 1: Iteration: 1550 / 2000 [ 77%]  (Sampling)
+Chain 2: Iteration:  900 / 2000 [ 45%]  (Sampling)
+Chain 1: Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Chain 1: Iteration: 1650 / 2000 [ 82%]  (Sampling)
+Chain 2: Iteration:  950 / 2000 [ 47%]  (Sampling)
+Chain 1: Iteration: 1700 / 2000 [ 85%]  (Sampling)
+Chain 1: Iteration: 1750 / 2000 [ 87%]  (Sampling)
+Chain 2: Iteration: 1000 / 2000 [ 50%]  (Sampling)
+Chain 1: Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Chain 1: Iteration: 1850 / 2000 [ 92%]  (Sampling)
+Chain 2: Iteration: 1050 / 2000 [ 52%]  (Sampling)
+Chain 1: Iteration: 1900 / 2000 [ 95%]  (Sampling)
+Chain 1: Iteration: 1950 / 2000 [ 97%]  (Sampling)
+Chain 2: Iteration: 1100 / 2000 [ 55%]  (Sampling)
+Chain 1: Iteration: 2000 / 2000 [100%]  (Sampling)
+Chain 1: 
+Chain 1:  Elapsed Time: 110.487 seconds (Warm-up)
+Chain 1:                591.557 seconds (Sampling)
+Chain 1:                702.044 seconds (Total)
+Chain 1: 
+Chain 2: Iteration: 1150 / 2000 [ 57%]  (Sampling)
+Chain 2: Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Chain 2: Iteration: 1250 / 2000 [ 62%]  (Sampling)
+Chain 2: Iteration: 1300 / 2000 [ 65%]  (Sampling)
+Chain 2: Iteration: 1350 / 2000 [ 67%]  (Sampling)
+Chain 2: Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Chain 2: Iteration: 1450 / 2000 [ 72%]  (Sampling)
+Chain 2: Iteration: 1500 / 2000 [ 75%]  (Sampling)
+Chain 2: Iteration: 1550 / 2000 [ 77%]  (Sampling)
+Chain 2: Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Chain 2: Iteration: 1650 / 2000 [ 82%]  (Sampling)
+Chain 2: Iteration: 1700 / 2000 [ 85%]  (Sampling)
+Chain 2: Iteration: 1750 / 2000 [ 87%]  (Sampling)
+Chain 2: Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Chain 2: Iteration: 1850 / 2000 [ 92%]  (Sampling)
+Chain 2: Iteration: 1900 / 2000 [ 95%]  (Sampling)
+Chain 2: Iteration: 1950 / 2000 [ 97%]  (Sampling)
+Chain 2: Iteration: 2000 / 2000 [100%]  (Sampling)
+Chain 2: 
+Chain 2:  Elapsed Time: 111.836 seconds (Warm-up)
+Chain 2:                1183.93 seconds (Sampling)
+Chain 2:                1295.76 seconds (Total)
+Chain 2: 
+MRP4 replication 2 
+
+SAMPLING FOR MODEL 'bernoulli' NOW (CHAIN 1).
+
+SAMPLING FOR MODEL 'bernoulli' NOW (CHAIN 2).
+Chain 1: 
+Chain 1: Gradient evaluation took 0.004537 seconds
+Chain 1: 1000 transitions using 10 leapfrog steps per transition would take 45.37 seconds.
+Chain 1: Adjust your expectations accordingly!
+Chain 1: 
+Chain 1: 
+Chain 2: 
+Chain 2: Gradient evaluation took 0.004364 seconds
+Chain 2: 1000 transitions using 10 leapfrog steps per transition would take 43.64 seconds.
+Chain 2: Adjust your expectations accordingly!
+Chain 2: 
+Chain 2: 
+Chain 1: Iteration:    1 / 2000 [  0%]  (Warmup)
+Chain 2: Iteration:    1 / 2000 [  0%]  (Warmup)
+Chain 1: Iteration:   50 / 2000 [  2%]  (Warmup)
+Chain 2: Iteration:   50 / 2000 [  2%]  (Warmup)
+Chain 1: Iteration:  100 / 2000 [  5%]  (Warmup)
+Chain 2: Iteration:  100 / 2000 [  5%]  (Warmup)
+Chain 1: Iteration:  150 / 2000 [  7%]  (Warmup)
+Chain 2: Iteration:  150 / 2000 [  7%]  (Warmup)
+Chain 1: Iteration:  200 / 2000 [ 10%]  (Warmup)
+Chain 2: Iteration:  200 / 2000 [ 10%]  (Warmup)
+Chain 1: Iteration:  250 / 2000 [ 12%]  (Warmup)
+Chain 1: Iteration:  251 / 2000 [ 12%]  (Sampling)
+Chain 2: Iteration:  250 / 2000 [ 12%]  (Warmup)
+Chain 2: Iteration:  251 / 2000 [ 12%]  (Sampling)
+Chain 1: Iteration:  300 / 2000 [ 15%]  (Sampling)
+Chain 2: Iteration:  300 / 2000 [ 15%]  (Sampling)
+Chain 1: Iteration:  350 / 2000 [ 17%]  (Sampling)
+Chain 2: Iteration:  350 / 2000 [ 17%]  (Sampling)
+Chain 1: Iteration:  400 / 2000 [ 20%]  (Sampling)
+Chain 2: Iteration:  400 / 2000 [ 20%]  (Sampling)
+Chain 1: Iteration:  450 / 2000 [ 22%]  (Sampling)
+Chain 2: Iteration:  450 / 2000 [ 22%]  (Sampling)
+Chain 1: Iteration:  500 / 2000 [ 25%]  (Sampling)
+Chain 2: Iteration:  500 / 2000 [ 25%]  (Sampling)
+Chain 1: Iteration:  550 / 2000 [ 27%]  (Sampling)
+Chain 2: Iteration:  550 / 2000 [ 27%]  (Sampling)
+Chain 1: Iteration:  600 / 2000 [ 30%]  (Sampling)
+Chain 2: Iteration:  600 / 2000 [ 30%]  (Sampling)
+Chain 1: Iteration:  650 / 2000 [ 32%]  (Sampling)
+Chain 2: Iteration:  650 / 2000 [ 32%]  (Sampling)
+Chain 1: Iteration:  700 / 2000 [ 35%]  (Sampling)
+Chain 2: Iteration:  700 / 2000 [ 35%]  (Sampling)
+Chain 1: Iteration:  750 / 2000 [ 37%]  (Sampling)
+Chain 2: Iteration:  750 / 2000 [ 37%]  (Sampling)
+Chain 1: Iteration:  800 / 2000 [ 40%]  (Sampling)
+Chain 2: Iteration:  800 / 2000 [ 40%]  (Sampling)
+Chain 1: Iteration:  850 / 2000 [ 42%]  (Sampling)
+Chain 2: Iteration:  850 / 2000 [ 42%]  (Sampling)
+Chain 1: Iteration:  900 / 2000 [ 45%]  (Sampling)
+Chain 2: Iteration:  900 / 2000 [ 45%]  (Sampling)
+Chain 1: Iteration:  950 / 2000 [ 47%]  (Sampling)
+Chain 2: Iteration:  950 / 2000 [ 47%]  (Sampling)
+Chain 1: Iteration: 1000 / 2000 [ 50%]  (Sampling)
+Chain 2: Iteration: 1000 / 2000 [ 50%]  (Sampling)
+Chain 1: Iteration: 1050 / 2000 [ 52%]  (Sampling)
+Chain 2: Iteration: 1050 / 2000 [ 52%]  (Sampling)
+Chain 1: Iteration: 1100 / 2000 [ 55%]  (Sampling)
+Chain 2: Iteration: 1100 / 2000 [ 55%]  (Sampling)
+Chain 1: Iteration: 1150 / 2000 [ 57%]  (Sampling)
+Chain 2: Iteration: 1150 / 2000 [ 57%]  (Sampling)
+Chain 1: Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Chain 2: Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Chain 1: Iteration: 1250 / 2000 [ 62%]  (Sampling)
+Chain 2: Iteration: 1250 / 2000 [ 62%]  (Sampling)
+Chain 1: Iteration: 1300 / 2000 [ 65%]  (Sampling)
+Chain 2: Iteration: 1300 / 2000 [ 65%]  (Sampling)
+Chain 1: Iteration: 1350 / 2000 [ 67%]  (Sampling)
+Chain 2: Iteration: 1350 / 2000 [ 67%]  (Sampling)
+Chain 1: Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Chain 2: Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Chain 2: Iteration: 1450 / 2000 [ 72%]  (Sampling)
+Chain 1: Iteration: 1450 / 2000 [ 72%]  (Sampling)
+Chain 2: Iteration: 1500 / 2000 [ 75%]  (Sampling)
+Chain 2: Iteration: 1550 / 2000 [ 77%]  (Sampling)
+Chain 2: Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Chain 2: Iteration: 1650 / 2000 [ 82%]  (Sampling)
+Chain 2: Iteration: 1700 / 2000 [ 85%]  (Sampling)
+Chain 2: Iteration: 1750 / 2000 [ 87%]  (Sampling)
+Chain 2: Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Chain 2: Iteration: 1850 / 2000 [ 92%]  (Sampling)
+Chain 2: Iteration: 1900 / 2000 [ 95%]  (Sampling)
+Chain 2: Iteration: 1950 / 2000 [ 97%]  (Sampling)
+Chain 2: Iteration: 2000 / 2000 [100%]  (Sampling)
+Chain 2: 
+Chain 2:  Elapsed Time: 93.938 seconds (Warm-up)
+Chain 2:                368.17 seconds (Sampling)
+Chain 2:                462.108 seconds (Total)
+Chain 2: 
+Chain 1: Iteration: 1500 / 2000 [ 75%]  (Sampling)
+Chain 1: Iteration: 1550 / 2000 [ 77%]  (Sampling)
+Chain 1: Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Chain 1: Iteration: 1650 / 2000 [ 82%]  (Sampling)
+Chain 1: Iteration: 1700 / 2000 [ 85%]  (Sampling)
+Chain 1: Iteration: 1750 / 2000 [ 87%]  (Sampling)
+Chain 1: Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Chain 1: Iteration: 1850 / 2000 [ 92%]  (Sampling)
+Chain 1: Iteration: 1900 / 2000 [ 95%]  (Sampling)
+Chain 1: Iteration: 1950 / 2000 [ 97%]  (Sampling)
+Chain 1: Iteration: 2000 / 2000 [100%]  (Sampling)
+Chain 1: 
+Chain 1:  Elapsed Time: 84.272 seconds (Warm-up)
+Chain 1:                544.362 seconds (Sampling)
+Chain 1:                628.634 seconds (Total)
+Chain 1: 
+MRP4 replication 3 
+
+SAMPLING FOR MODEL 'bernoulli' NOW (CHAIN 1).
+Chain 1: 
+
+Chain SAMPLING1 FOR MODEL ': bernoulliGradient evaluation took 0.00511 seconds' NOW (CHAIN 
+2Chain ).
+1: 1000 transitions using 10 leapfrog steps per transition would take 51.1 seconds.
+Chain 1: Adjust your expectations accordingly!
+Chain 1: 
+Chain 1: 
+Chain 2: 
+Chain 2: Gradient evaluation took 0.004365 seconds
+Chain 2: 1000 transitions using 10 leapfrog steps per transition would take 43.65 seconds.
+Chain 2: Adjust your expectations accordingly!
+Chain 2: 
+Chain 2: 
+Chain 1: Iteration:    1 / 2000 [  0%]  (Warmup)
+Chain 2: Iteration:    1 / 2000 [  0%]  (Warmup)
+Chain 2: Iteration:   50 / 2000 [  2%]  (Warmup)
+Chain 1: Iteration:   50 / 2000 [  2%]  (Warmup)
+Chain 2: Iteration:  100 / 2000 [  5%]  (Warmup)
+Chain 2: Iteration:  150 / 2000 [  7%]  (Warmup)
+Chain 1: Iteration:  100 / 2000 [  5%]  (Warmup)
+Chain 2: Iteration:  200 / 2000 [ 10%]  (Warmup)
+Chain 1: Iteration:  150 / 2000 [  7%]  (Warmup)
+Chain 2: Iteration:  250 / 2000 [ 12%]  (Warmup)
+Chain 2: Iteration:  251 / 2000 [ 12%]  (Sampling)
+Chain 1: Iteration:  200 / 2000 [ 10%]  (Warmup)
+Chain 2: Iteration:  300 / 2000 [ 15%]  (Sampling)
+Chain 2: Iteration:  350 / 2000 [ 17%]  (Sampling)
+Chain 1: Iteration:  250 / 2000 [ 12%]  (Warmup)
+Chain 1: Iteration:  251 / 2000 [ 12%]  (Sampling)
+Chain 1: Iteration:  300 / 2000 [ 15%]  (Sampling)
+Chain 2: Iteration:  400 / 2000 [ 20%]  (Sampling)
+Chain 1: Iteration:  350 / 2000 [ 17%]  (Sampling)
+Chain 2: Iteration:  450 / 2000 [ 22%]  (Sampling)
+Chain 1: Iteration:  400 / 2000 [ 20%]  (Sampling)
+Chain 2: Iteration:  500 / 2000 [ 25%]  (Sampling)
+Chain 1: Iteration:  450 / 2000 [ 22%]  (Sampling)
+Chain 2: Iteration:  550 / 2000 [ 27%]  (Sampling)
+Chain 1: Iteration:  500 / 2000 [ 25%]  (Sampling)
+Chain 2: Iteration:  600 / 2000 [ 30%]  (Sampling)
+Chain 1: Iteration:  550 / 2000 [ 27%]  (Sampling)
+Chain 2: Iteration:  650 / 2000 [ 32%]  (Sampling)
+Chain 1: Iteration:  600 / 2000 [ 30%]  (Sampling)
+Chain 2: Iteration:  700 / 2000 [ 35%]  (Sampling)
+Chain 1: Iteration:  650 / 2000 [ 32%]  (Sampling)
+Chain 2: Iteration:  750 / 2000 [ 37%]  (Sampling)
+Chain 1: Iteration:  700 / 2000 [ 35%]  (Sampling)
+Chain 2: Iteration:  800 / 2000 [ 40%]  (Sampling)
+Chain 1: Iteration:  750 / 2000 [ 37%]  (Sampling)
+Chain 2: Iteration:  850 / 2000 [ 42%]  (Sampling)
+Chain 1: Iteration:  800 / 2000 [ 40%]  (Sampling)
+Chain 2: Iteration:  900 / 2000 [ 45%]  (Sampling)
+Chain 2: Iteration:  950 / 2000 [ 47%]  (Sampling)
+Chain 1: Iteration:  850 / 2000 [ 42%]  (Sampling)
+Chain 1: Iteration:  900 / 2000 [ 45%]  (Sampling)
+Chain 2: Iteration: 1000 / 2000 [ 50%]  (Sampling)
+Chain 1: Iteration:  950 / 2000 [ 47%]  (Sampling)
+Chain 2: Iteration: 1050 / 2000 [ 52%]  (Sampling)
+Chain 1: Iteration: 1000 / 2000 [ 50%]  (Sampling)
+Chain 2: Iteration: 1100 / 2000 [ 55%]  (Sampling)
+Chain 1: Iteration: 1050 / 2000 [ 52%]  (Sampling)
+Chain 2: Iteration: 1150 / 2000 [ 57%]  (Sampling)
+Chain 1: Iteration: 1100 / 2000 [ 55%]  (Sampling)
+Chain 2: Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Chain 1: Iteration: 1150 / 2000 [ 57%]  (Sampling)
+Chain 2: Iteration: 1250 / 2000 [ 62%]  (Sampling)
+Chain 1: Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Chain 2: Iteration: 1300 / 2000 [ 65%]  (Sampling)
+Chain 1: Iteration: 1250 / 2000 [ 62%]  (Sampling)
+Chain 2: Iteration: 1350 / 2000 [ 67%]  (Sampling)
+Chain 2: Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Chain 1: Iteration: 1300 / 2000 [ 65%]  (Sampling)
+Chain 2: Iteration: 1450 / 2000 [ 72%]  (Sampling)
+Chain 1: Iteration: 1350 / 2000 [ 67%]  (Sampling)
+Chain 2: Iteration: 1500 / 2000 [ 75%]  (Sampling)
+Chain 1: Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Chain 2: Iteration: 1550 / 2000 [ 77%]  (Sampling)
+Chain 1: Iteration: 1450 / 2000 [ 72%]  (Sampling)
+Chain 2: Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Chain 1: Iteration: 1500 / 2000 [ 75%]  (Sampling)
+Chain 2: Iteration: 1650 / 2000 [ 82%]  (Sampling)
+Chain 1: Iteration: 1550 / 2000 [ 77%]  (Sampling)
+Chain 2: Iteration: 1700 / 2000 [ 85%]  (Sampling)
+Chain 1: Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Chain 2: Iteration: 1750 / 2000 [ 87%]  (Sampling)
+Chain 1: Iteration: 1650 / 2000 [ 82%]  (Sampling)
+Chain 2: Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Chain 1: Iteration: 1700 / 2000 [ 85%]  (Sampling)
+Chain 2: Iteration: 1850 / 2000 [ 92%]  (Sampling)
+Chain 1: Iteration: 1750 / 2000 [ 87%]  (Sampling)
+Chain 2: Iteration: 1900 / 2000 [ 95%]  (Sampling)
+Chain 1: Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Chain 2: Iteration: 1950 / 2000 [ 97%]  (Sampling)
+Chain 1: Iteration: 1850 / 2000 [ 92%]  (Sampling)
+Chain 2: Iteration: 2000 / 2000 [100%]  (Sampling)
+Chain 2: 
+Chain 2:  Elapsed Time: 95.901 seconds (Warm-up)
+Chain 2:                724.918 seconds (Sampling)
+Chain 2:                820.819 seconds (Total)
+Chain 2: 
+Chain 1: Iteration: 1900 / 2000 [ 95%]  (Sampling)
+Chain 1: Iteration: 1950 / 2000 [ 97%]  (Sampling)
+Chain 1: Iteration: 2000 / 2000 [100%]  (Sampling)
+Chain 1: 
+Chain 1:  Elapsed Time: 139.423 seconds (Warm-up)
+Chain 1:                727.105 seconds (Sampling)
+Chain 1:                866.528 seconds (Total)
+Chain 1: 
+MRP4 replication 4 
+
+SAMPLING FOR MODEL 'bernoulli' NOW (CHAIN 1).
+Chain 1: 
+Chain 1: Gradient evaluation took 0.004275 seconds
+Chain 1: 1000 transitions using 10 leapfrog steps per transition would take 42.75 seconds.
+Chain 1: Adjust your expectations accordingly!
+Chain 1: 
+Chain 1: 
+
+SAMPLING FOR MODEL 'bernoulli' NOW (CHAIN 2).
+Chain 2: 
+Chain 2: Gradient evaluation took 0.005333 seconds
+Chain 2: 1000 transitions using 10 leapfrog steps per transition would take 53.33 seconds.
+Chain 2: Adjust your expectations accordingly!
+Chain 2: 
+Chain 2: 
+Chain 1: Iteration:    1 / 2000 [  0%]  (Warmup)
+Chain 2: Iteration:    1 / 2000 [  0%]  (Warmup)
+Chain 1: Iteration:   50 / 2000 [  2%]  (Warmup)
+Chain 2: Iteration:   50 / 2000 [  2%]  (Warmup)
+Chain 1: Iteration:  100 / 2000 [  5%]  (Warmup)
+Chain 2: Iteration:  100 / 2000 [  5%]  (Warmup)
+Chain 1: Iteration:  150 / 2000 [  7%]  (Warmup)
+Chain 2: Iteration:  150 / 2000 [  7%]  (Warmup)
+Chain 2: Iteration:  200 / 2000 [ 10%]  (Warmup)
+Chain 1: Iteration:  200 / 2000 [ 10%]  (Warmup)
+Chain 2: Iteration:  250 / 2000 [ 12%]  (Warmup)
+Chain 2: Iteration:  251 / 2000 [ 12%]  (Sampling)
+Chain 2: Iteration:  300 / 2000 [ 15%]  (Sampling)
+Chain 1: Iteration:  250 / 2000 [ 12%]  (Warmup)
+Chain 1: Iteration:  251 / 2000 [ 12%]  (Sampling)
+Chain 1: Iteration:  300 / 2000 [ 15%]  (Sampling)
+Chain 2: Iteration:  350 / 2000 [ 17%]  (Sampling)
+Chain 1: Iteration:  350 / 2000 [ 17%]  (Sampling)
+Chain 2: Iteration:  400 / 2000 [ 20%]  (Sampling)
+Chain 1: Iteration:  400 / 2000 [ 20%]  (Sampling)
+Chain 2: Iteration:  450 / 2000 [ 22%]  (Sampling)
+Chain 1: Iteration:  450 / 2000 [ 22%]  (Sampling)
+Chain 1: Iteration:  500 / 2000 [ 25%]  (Sampling)
+Chain 2: Iteration:  500 / 2000 [ 25%]  (Sampling)
+Chain 1: Iteration:  550 / 2000 [ 27%]  (Sampling)
+Chain 2: Iteration:  550 / 2000 [ 27%]  (Sampling)
+Chain 1: Iteration:  600 / 2000 [ 30%]  (Sampling)
+Chain 2: Iteration:  600 / 2000 [ 30%]  (Sampling)
+Chain 1: Iteration:  650 / 2000 [ 32%]  (Sampling)
+Chain 1: Iteration:  700 / 2000 [ 35%]  (Sampling)
+Chain 2: Iteration:  650 / 2000 [ 32%]  (Sampling)
+Chain 1: Iteration:  750 / 2000 [ 37%]  (Sampling)
+Chain 2: Iteration:  700 / 2000 [ 35%]  (Sampling)
+Chain 1: Iteration:  800 / 2000 [ 40%]  (Sampling)
+Chain 1: Iteration:  850 / 2000 [ 42%]  (Sampling)
+Chain 2: Iteration:  750 / 2000 [ 37%]  (Sampling)
+Chain 1: Iteration:  900 / 2000 [ 45%]  (Sampling)
+Chain 2: Iteration:  800 / 2000 [ 40%]  (Sampling)
+Chain 1: Iteration:  950 / 2000 [ 47%]  (Sampling)
+Chain 2: Iteration:  850 / 2000 [ 42%]  (Sampling)
+Chain 1: Iteration: 1000 / 2000 [ 50%]  (Sampling)
+Chain 1: Iteration: 1050 / 2000 [ 52%]  (Sampling)
+Chain 2: Iteration:  900 / 2000 [ 45%]  (Sampling)
+Chain 1: Iteration: 1100 / 2000 [ 55%]  (Sampling)
+Chain 2: Iteration:  950 / 2000 [ 47%]  (Sampling)
+Chain 1: Iteration: 1150 / 2000 [ 57%]  (Sampling)
+Chain 2: Iteration: 1000 / 2000 [ 50%]  (Sampling)
+Chain 1: Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Chain 1: Iteration: 1250 / 2000 [ 62%]  (Sampling)
+Chain 2: Iteration: 1050 / 2000 [ 52%]  (Sampling)
+Chain 1: Iteration: 1300 / 2000 [ 65%]  (Sampling)
+Chain 1: Iteration: 1350 / 2000 [ 67%]  (Sampling)
+Chain 2: Iteration: 1100 / 2000 [ 55%]  (Sampling)
+Chain 1: Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Chain 2: Iteration: 1150 / 2000 [ 57%]  (Sampling)
+Chain 1: Iteration: 1450 / 2000 [ 72%]  (Sampling)
+Chain 2: Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Chain 1: Iteration: 1500 / 2000 [ 75%]  (Sampling)
+Chain 1: Iteration: 1550 / 2000 [ 77%]  (Sampling)
+Chain 2: Iteration: 1250 / 2000 [ 62%]  (Sampling)
+Chain 1: Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Chain 2: Iteration: 1300 / 2000 [ 65%]  (Sampling)
+Chain 1: Iteration: 1650 / 2000 [ 82%]  (Sampling)
+Chain 2: Iteration: 1350 / 2000 [ 67%]  (Sampling)
+Chain 1: Iteration: 1700 / 2000 [ 85%]  (Sampling)
+Chain 1: Iteration: 1750 / 2000 [ 87%]  (Sampling)
+Chain 2: Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Chain 1: Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Chain 2: Iteration: 1450 / 2000 [ 72%]  (Sampling)
+Chain 1: Iteration: 1850 / 2000 [ 92%]  (Sampling)
+Chain 2: Iteration: 1500 / 2000 [ 75%]  (Sampling)
+Chain 1: Iteration: 1900 / 2000 [ 95%]  (Sampling)
+Chain 1: Iteration: 1950 / 2000 [ 97%]  (Sampling)
+Chain 2: Iteration: 1550 / 2000 [ 77%]  (Sampling)
+Chain 1: Iteration: 2000 / 2000 [100%]  (Sampling)
+Chain 1: 
+Chain 1:  Elapsed Time: 119.568 seconds (Warm-up)
+Chain 1:                461.072 seconds (Sampling)
+Chain 1:                580.64 seconds (Total)
+Chain 1: 
+Chain 2: Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Chain 2: Iteration: 1650 / 2000 [ 82%]  (Sampling)
+Chain 2: Iteration: 1700 / 2000 [ 85%]  (Sampling)
+Chain 2: Iteration: 1750 / 2000 [ 87%]  (Sampling)
+Chain 2: Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Chain 2: Iteration: 1850 / 2000 [ 92%]  (Sampling)
+Chain 2: Iteration: 1900 / 2000 [ 95%]  (Sampling)
+Chain 2: Iteration: 1950 / 2000 [ 97%]  (Sampling)
+Chain 2: Iteration: 2000 / 2000 [100%]  (Sampling)
+Chain 2: 
+Chain 2:  Elapsed Time: 101.096 seconds (Warm-up)
+Chain 2:                632.73 seconds (Sampling)
+Chain 2:                733.826 seconds (Total)
+Chain 2: 
+MRP4 replication 5 
+
+SAMPLING FOR MODEL 'bernoulli' NOW (CHAIN 1).
+Chain 1: 
+Chain 1: Gradient evaluation took 0.005305 seconds
+Chain 1: 1000 transitions using 10 leapfrog steps per transition would take 53.05 seconds.
+Chain 1: Adjust your expectations accordingly!
+Chain 1: 
+Chain 1: 
+
+SAMPLING FOR MODEL 'bernoulli' NOW (CHAIN 2).
+Chain 2: 
+Chain 2: Gradient evaluation took 0.004717 seconds
+Chain 2: 1000 transitions using 10 leapfrog steps per transition would take 47.17 seconds.
+Chain 2: Adjust your expectations accordingly!
+Chain 2: 
+Chain 2: 
+Chain 1: Iteration:    1 / 2000 [  0%]  (Warmup)
+Chain 2: Iteration:    1 / 2000 [  0%]  (Warmup)
+Chain 1: Iteration:   50 / 2000 [  2%]  (Warmup)
+Chain 2: Iteration:   50 / 2000 [  2%]  (Warmup)
+Chain 2: Iteration:  100 / 2000 [  5%]  (Warmup)
+Chain 1: Iteration:  100 / 2000 [  5%]  (Warmup)
+Chain 1: Iteration:  150 / 2000 [  7%]  (Warmup)
+Chain 2: Iteration:  150 / 2000 [  7%]  (Warmup)
+Chain 1: Iteration:  200 / 2000 [ 10%]  (Warmup)
+Chain 2: Iteration:  200 / 2000 [ 10%]  (Warmup)
+Chain 2: Iteration:  250 / 2000 [ 12%]  (Warmup)
+Chain 2: Iteration:  251 / 2000 [ 12%]  (Sampling)
+Chain 1: Iteration:  250 / 2000 [ 12%]  (Warmup)
+Chain 1: Iteration:  251 / 2000 [ 12%]  (Sampling)
+Chain 2: Iteration:  300 / 2000 [ 15%]  (Sampling)
+Chain 2: Iteration:  350 / 2000 [ 17%]  (Sampling)
+Chain 1: Iteration:  300 / 2000 [ 15%]  (Sampling)
+Chain 2: Iteration:  400 / 2000 [ 20%]  (Sampling)
+Chain 2: Iteration:  450 / 2000 [ 22%]  (Sampling)
+Chain 1: Iteration:  350 / 2000 [ 17%]  (Sampling)
+Chain 2: Iteration:  500 / 2000 [ 25%]  (Sampling)
+Chain 1: Iteration:  400 / 2000 [ 20%]  (Sampling)
+Chain 2: Iteration:  550 / 2000 [ 27%]  (Sampling)
+Chain 2: Iteration:  600 / 2000 [ 30%]  (Sampling)
+Chain 1: Iteration:  450 / 2000 [ 22%]  (Sampling)
+Chain 2: Iteration:  650 / 2000 [ 32%]  (Sampling)
+Chain 2: Iteration:  700 / 2000 [ 35%]  (Sampling)
+Chain 1: Iteration:  500 / 2000 [ 25%]  (Sampling)
+Chain 2: Iteration:  750 / 2000 [ 37%]  (Sampling)
+Chain 2: Iteration:  800 / 2000 [ 40%]  (Sampling)
+Chain 1: Iteration:  550 / 2000 [ 27%]  (Sampling)
+Chain 2: Iteration:  850 / 2000 [ 42%]  (Sampling)
+Chain 1: Iteration:  600 / 2000 [ 30%]  (Sampling)
+Chain 2: Iteration:  900 / 2000 [ 45%]  (Sampling)
+Chain 2: Iteration:  950 / 2000 [ 47%]  (Sampling)
+Chain 1: Iteration:  650 / 2000 [ 32%]  (Sampling)
+Chain 2: Iteration: 1000 / 2000 [ 50%]  (Sampling)
+Chain 2: Iteration: 1050 / 2000 [ 52%]  (Sampling)
+Chain 1: Iteration:  700 / 2000 [ 35%]  (Sampling)
+Chain 2: Iteration: 1100 / 2000 [ 55%]  (Sampling)
+Chain 1: Iteration:  750 / 2000 [ 37%]  (Sampling)
+Chain 2: Iteration: 1150 / 2000 [ 57%]  (Sampling)
+Chain 2: Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Chain 1: Iteration:  800 / 2000 [ 40%]  (Sampling)
+Chain 2: Iteration: 1250 / 2000 [ 62%]  (Sampling)
+Chain 2: Iteration: 1300 / 2000 [ 65%]  (Sampling)
+Chain 1: Iteration:  850 / 2000 [ 42%]  (Sampling)
+Chain 2: Iteration: 1350 / 2000 [ 67%]  (Sampling)
+Chain 2: Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Chain 1: Iteration:  900 / 2000 [ 45%]  (Sampling)
+Chain 2: Iteration: 1450 / 2000 [ 72%]  (Sampling)
+Chain 1: Iteration:  950 / 2000 [ 47%]  (Sampling)
+Chain 2: Iteration: 1500 / 2000 [ 75%]  (Sampling)
+Chain 2: Iteration: 1550 / 2000 [ 77%]  (Sampling)
+Chain 1: Iteration: 1000 / 2000 [ 50%]  (Sampling)
+Chain 2: Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Chain 2: Iteration: 1650 / 2000 [ 82%]  (Sampling)
+Chain 1: Iteration: 1050 / 2000 [ 52%]  (Sampling)
+Chain 2: Iteration: 1700 / 2000 [ 85%]  (Sampling)
+Chain 1: Iteration: 1100 / 2000 [ 55%]  (Sampling)
+Chain 2: Iteration: 1750 / 2000 [ 87%]  (Sampling)
+Chain 2: Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Chain 1: Iteration: 1150 / 2000 [ 57%]  (Sampling)
+Chain 2: Iteration: 1850 / 2000 [ 92%]  (Sampling)
+Chain 2: Iteration: 1900 / 2000 [ 95%]  (Sampling)
+Chain 1: Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Chain 2: Iteration: 1950 / 2000 [ 97%]  (Sampling)
+Chain 2: Iteration: 2000 / 2000 [100%]  (Sampling)
+Chain 2: 
+Chain 2:  Elapsed Time: 114.816 seconds (Warm-up)
+Chain 2:                374.72 seconds (Sampling)
+Chain 2:                489.536 seconds (Total)
+Chain 2: 
+Chain 1: Iteration: 1250 / 2000 [ 62%]  (Sampling)
+Chain 1: Iteration: 1300 / 2000 [ 65%]  (Sampling)
+Chain 1: Iteration: 1350 / 2000 [ 67%]  (Sampling)
+Chain 1: Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Chain 1: Iteration: 1450 / 2000 [ 72%]  (Sampling)
+Chain 1: Iteration: 1500 / 2000 [ 75%]  (Sampling)
+Chain 1: Iteration: 1550 / 2000 [ 77%]  (Sampling)
+Chain 1: Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Chain 1: Iteration: 1650 / 2000 [ 82%]  (Sampling)
+Chain 1: Iteration: 1700 / 2000 [ 85%]  (Sampling)
+Chain 1: Iteration: 1750 / 2000 [ 87%]  (Sampling)
+Chain 1: Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Chain 1: Iteration: 1850 / 2000 [ 92%]  (Sampling)
+Chain 1: Iteration: 1900 / 2000 [ 95%]  (Sampling)
+Chain 1: Iteration: 1950 / 2000 [ 97%]  (Sampling)
+Chain 1: Iteration: 2000 / 2000 [100%]  (Sampling)
+Chain 1: 
+Chain 1:  Elapsed Time: 120.831 seconds (Warm-up)
+Chain 1:                646.326 seconds (Sampling)
+Chain 1:                767.157 seconds (Total)
+Chain 1: 
+MRP4 replication 6 
+
+SAMPLING FOR MODEL 'bernoulli' NOW (CHAIN 1).
+
+SAMPLING FOR MODEL 'bernoulli' NOW (CHAIN 2).
+Chain 1: 
+Chain 1: Gradient evaluation took 0.005006 seconds
+Chain 1: 1000 transitions using 10 leapfrog steps per transition would take 50.06 seconds.
+Chain 1: Adjust your expectations accordingly!
+Chain 1: 
+Chain 1: 
+Chain 2: 
+Chain 2: Gradient evaluation took 0.004356 seconds
+Chain 2: 1000 transitions using 10 leapfrog steps per transition would take 43.56 seconds.
+Chain 2: Adjust your expectations accordingly!
+Chain 2: 
+Chain 2: 
+Chain 1: Iteration:    1 / 2000 [  0%]  (Warmup)
+Chain 2: Iteration:    1 / 2000 [  0%]  (Warmup)
+Chain 2: Iteration:   50 / 2000 [  2%]  (Warmup)
+Chain 1: Iteration:   50 / 2000 [  2%]  (Warmup)
+Chain 2: Iteration:  100 / 2000 [  5%]  (Warmup)
+Chain 1: Iteration:  100 / 2000 [  5%]  (Warmup)
+Chain 2: Iteration:  150 / 2000 [  7%]  (Warmup)
+Chain 1: Iteration:  150 / 2000 [  7%]  (Warmup)
+Chain 2: Iteration:  200 / 2000 [ 10%]  (Warmup)
+Chain 1: Iteration:  200 / 2000 [ 10%]  (Warmup)
+Chain 2: Iteration:  250 / 2000 [ 12%]  (Warmup)
+Chain 2: Iteration:  251 / 2000 [ 12%]  (Sampling)
+Chain 1: Iteration:  250 / 2000 [ 12%]  (Warmup)
+Chain 1: Iteration:  251 / 2000 [ 12%]  (Sampling)
+Chain 2: Iteration:  300 / 2000 [ 15%]  (Sampling)
+Chain 1: Iteration:  300 / 2000 [ 15%]  (Sampling)
+Chain 1: Iteration:  350 / 2000 [ 17%]  (Sampling)
+Chain 2: Iteration:  350 / 2000 [ 17%]  (Sampling)
+Chain 1: Iteration:  400 / 2000 [ 20%]  (Sampling)
+Chain 1: Iteration:  450 / 2000 [ 22%]  (Sampling)
+Chain 2: Iteration:  400 / 2000 [ 20%]  (Sampling)
+Chain 1: Iteration:  500 / 2000 [ 25%]  (Sampling)
+Chain 2: Iteration:  450 / 2000 [ 22%]  (Sampling)
+Chain 1: Iteration:  550 / 2000 [ 27%]  (Sampling)
+Chain 1: Iteration:  600 / 2000 [ 30%]  (Sampling)
+Chain 2: Iteration:  500 / 2000 [ 25%]  (Sampling)
+Chain 1: Iteration:  650 / 2000 [ 32%]  (Sampling)
+Chain 1: Iteration:  700 / 2000 [ 35%]  (Sampling)
+Chain 2: Iteration:  550 / 2000 [ 27%]  (Sampling)
+Chain 1: Iteration:  750 / 2000 [ 37%]  (Sampling)
+Chain 2: Iteration:  600 / 2000 [ 30%]  (Sampling)
+Chain 1: Iteration:  800 / 2000 [ 40%]  (Sampling)
+Chain 1: Iteration:  850 / 2000 [ 42%]  (Sampling)
+Chain 2: Iteration:  650 / 2000 [ 32%]  (Sampling)
+Chain 1: Iteration:  900 / 2000 [ 45%]  (Sampling)
+Chain 1: Iteration:  950 / 2000 [ 47%]  (Sampling)
+Chain 2: Iteration:  700 / 2000 [ 35%]  (Sampling)
+Chain 1: Iteration: 1000 / 2000 [ 50%]  (Sampling)
+Chain 2: Iteration:  750 / 2000 [ 37%]  (Sampling)
+Chain 1: Iteration: 1050 / 2000 [ 52%]  (Sampling)
+Chain 1: Iteration: 1100 / 2000 [ 55%]  (Sampling)
+Chain 2: Iteration:  800 / 2000 [ 40%]  (Sampling)
+Chain 1: Iteration: 1150 / 2000 [ 57%]  (Sampling)
+Chain 1: Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Chain 2: Iteration:  850 / 2000 [ 42%]  (Sampling)
+Chain 1: Iteration: 1250 / 2000 [ 62%]  (Sampling)
+Chain 2: Iteration:  900 / 2000 [ 45%]  (Sampling)
+Chain 1: Iteration: 1300 / 2000 [ 65%]  (Sampling)
+Chain 1: Iteration: 1350 / 2000 [ 67%]  (Sampling)
+Chain 2: Iteration:  950 / 2000 [ 47%]  (Sampling)
+Chain 1: Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Chain 1: Iteration: 1450 / 2000 [ 72%]  (Sampling)
+Chain 2: Iteration: 1000 / 2000 [ 50%]  (Sampling)
+Chain 1: Iteration: 1500 / 2000 [ 75%]  (Sampling)
+Chain 2: Iteration: 1050 / 2000 [ 52%]  (Sampling)
+Chain 1: Iteration: 1550 / 2000 [ 77%]  (Sampling)
+Chain 1: Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Chain 2: Iteration: 1100 / 2000 [ 55%]  (Sampling)
+Chain 1: Iteration: 1650 / 2000 [ 82%]  (Sampling)
+Chain 1: Iteration: 1700 / 2000 [ 85%]  (Sampling)
+Chain 2: Iteration: 1150 / 2000 [ 57%]  (Sampling)
+Chain 1: Iteration: 1750 / 2000 [ 87%]  (Sampling)
+Chain 2: Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Chain 1: Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Chain 1: Iteration: 1850 / 2000 [ 92%]  (Sampling)
+Chain 2: Iteration: 1250 / 2000 [ 62%]  (Sampling)
+Chain 1: Iteration: 1900 / 2000 [ 95%]  (Sampling)
+Chain 1: Iteration: 1950 / 2000 [ 97%]  (Sampling)
+Chain 2: Iteration: 1300 / 2000 [ 65%]  (Sampling)
+Chain 1: Iteration: 2000 / 2000 [100%]  (Sampling)
+Chain 1: 
+Chain 1:  Elapsed Time: 114.357 seconds (Warm-up)
+Chain 1:                380.095 seconds (Sampling)
+Chain 1:                494.452 seconds (Total)
+Chain 1: 
+Chain 2: Iteration: 1350 / 2000 [ 67%]  (Sampling)
+Chain 2: Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Chain 2: Iteration: 1450 / 2000 [ 72%]  (Sampling)
+Chain 2: Iteration: 1500 / 2000 [ 75%]  (Sampling)
+Chain 2: Iteration: 1550 / 2000 [ 77%]  (Sampling)
+Chain 2: Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Chain 2: Iteration: 1650 / 2000 [ 82%]  (Sampling)
+Chain 2: Iteration: 1700 / 2000 [ 85%]  (Sampling)
+Chain 2: Iteration: 1750 / 2000 [ 87%]  (Sampling)
+Chain 2: Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Chain 2: Iteration: 1850 / 2000 [ 92%]  (Sampling)
+Chain 2: Iteration: 1900 / 2000 [ 95%]  (Sampling)
+Chain 2: Iteration: 1950 / 2000 [ 97%]  (Sampling)
+Chain 2: Iteration: 2000 / 2000 [100%]  (Sampling)
+Chain 2: 
+Chain 2:  Elapsed Time: 104.703 seconds (Warm-up)
+Chain 2:                629.507 seconds (Sampling)
+Chain 2:                734.21 seconds (Total)
+Chain 2: 
+MRP4 replication 7 
+
+SAMPLING FOR MODEL 'bernoulli' NOW (CHAIN 1).
+Chain 1: 
+Chain 1: Gradient evaluation took 0.004656 seconds
+Chain 1: 1000 transitions using 10 leapfrog steps per transition would take 46.56 seconds.
+Chain 1: Adjust your expectations accordingly!
+Chain 1: 
+Chain 1: 
+
+SAMPLING FOR MODEL 'bernoulli' NOW (CHAIN 2).
+Chain 2: 
+Chain 2: Gradient evaluation took 0.004632 seconds
+Chain 2: 1000 transitions using 10 leapfrog steps per transition would take 46.32 seconds.
+Chain 2: Adjust your expectations accordingly!
+Chain 2: 
+Chain 2: 
+Chain 1: Iteration:    1 / 2000 [  0%]  (Warmup)
+Chain 2: Iteration:    1 / 2000 [  0%]  (Warmup)
+Chain 2: Iteration:   50 / 2000 [  2%]  (Warmup)
+Chain 1: Iteration:   50 / 2000 [  2%]  (Warmup)
+Chain 2: Iteration:  100 / 2000 [  5%]  (Warmup)
+Chain 1: Iteration:  100 / 2000 [  5%]  (Warmup)
+Chain 2: Iteration:  150 / 2000 [  7%]  (Warmup)
+Chain 2: Iteration:  200 / 2000 [ 10%]  (Warmup)
+Chain 2: Iteration:  250 / 2000 [ 12%]  (Warmup)
+Chain 2: Iteration:  251 / 2000 [ 12%]  (Sampling)
+Chain 1: Iteration:  150 / 2000 [  7%]  (Warmup)
+Chain 2: Iteration:  300 / 2000 [ 15%]  (Sampling)
+Chain 2: Iteration:  350 / 2000 [ 17%]  (Sampling)
+Chain 1: Iteration:  200 / 2000 [ 10%]  (Warmup)
+Chain 2: Iteration:  400 / 2000 [ 20%]  (Sampling)
+Chain 1: Iteration:  250 / 2000 [ 12%]  (Warmup)
+Chain 1: Iteration:  251 / 2000 [ 12%]  (Sampling)
+Chain 2: Iteration:  450 / 2000 [ 22%]  (Sampling)
+Chain 1: Iteration:  300 / 2000 [ 15%]  (Sampling)
+Chain 2: Iteration:  500 / 2000 [ 25%]  (Sampling)
+Chain 1: Iteration:  350 / 2000 [ 17%]  (Sampling)
+Chain 2: Iteration:  550 / 2000 [ 27%]  (Sampling)
+Chain 1: Iteration:  400 / 2000 [ 20%]  (Sampling)
+Chain 2: Iteration:  600 / 2000 [ 30%]  (Sampling)
+Chain 1: Iteration:  450 / 2000 [ 22%]  (Sampling)
+Chain 2: Iteration:  650 / 2000 [ 32%]  (Sampling)
+Chain 1: Iteration:  500 / 2000 [ 25%]  (Sampling)
+Chain 2: Iteration:  700 / 2000 [ 35%]  (Sampling)
+Chain 1: Iteration:  550 / 2000 [ 27%]  (Sampling)
+Chain 1: Iteration:  600 / 2000 [ 30%]  (Sampling)
+Chain 2: Iteration:  750 / 2000 [ 37%]  (Sampling)
+Chain 1: Iteration:  650 / 2000 [ 32%]  (Sampling)
+Chain 2: Iteration:  800 / 2000 [ 40%]  (Sampling)
+Chain 1: Iteration:  700 / 2000 [ 35%]  (Sampling)
+Chain 2: Iteration:  850 / 2000 [ 42%]  (Sampling)
+Chain 1: Iteration:  750 / 2000 [ 37%]  (Sampling)
+Chain 2: Iteration:  900 / 2000 [ 45%]  (Sampling)
+Chain 1: Iteration:  800 / 2000 [ 40%]  (Sampling)
+Chain 2: Iteration:  950 / 2000 [ 47%]  (Sampling)
+Chain 1: Iteration:  850 / 2000 [ 42%]  (Sampling)
+Chain 2: Iteration: 1000 / 2000 [ 50%]  (Sampling)
+Chain 1: Iteration:  900 / 2000 [ 45%]  (Sampling)
+Chain 2: Iteration: 1050 / 2000 [ 52%]  (Sampling)
+Chain 1: Iteration:  950 / 2000 [ 47%]  (Sampling)
+Chain 1: Iteration: 1000 / 2000 [ 50%]  (Sampling)
+Chain 2: Iteration: 1100 / 2000 [ 55%]  (Sampling)
+Chain 1: Iteration: 1050 / 2000 [ 52%]  (Sampling)
+Chain 2: Iteration: 1150 / 2000 [ 57%]  (Sampling)
+Chain 1: Iteration: 1100 / 2000 [ 55%]  (Sampling)
+Chain 2: Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Chain 1: Iteration: 1150 / 2000 [ 57%]  (Sampling)
+Chain 2: Iteration: 1250 / 2000 [ 62%]  (Sampling)
+Chain 1: Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Chain 2: Iteration: 1300 / 2000 [ 65%]  (Sampling)
+Chain 1: Iteration: 1250 / 2000 [ 62%]  (Sampling)
+Chain 2: Iteration: 1350 / 2000 [ 67%]  (Sampling)
+Chain 1: Iteration: 1300 / 2000 [ 65%]  (Sampling)
+Chain 2: Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Chain 1: Iteration: 1350 / 2000 [ 67%]  (Sampling)
+Chain 2: Iteration: 1450 / 2000 [ 72%]  (Sampling)
+Chain 1: Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Chain 1: Iteration: 1450 / 2000 [ 72%]  (Sampling)
+Chain 2: Iteration: 1500 / 2000 [ 75%]  (Sampling)
+Chain 1: Iteration: 1500 / 2000 [ 75%]  (Sampling)
+Chain 2: Iteration: 1550 / 2000 [ 77%]  (Sampling)
+Chain 1: Iteration: 1550 / 2000 [ 77%]  (Sampling)
+Chain 2: Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Chain 1: Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Chain 2: Iteration: 1650 / 2000 [ 82%]  (Sampling)
+Chain 1: Iteration: 1650 / 2000 [ 82%]  (Sampling)
+Chain 2: Iteration: 1700 / 2000 [ 85%]  (Sampling)
+Chain 1: Iteration: 1700 / 2000 [ 85%]  (Sampling)
+Chain 2: Iteration: 1750 / 2000 [ 87%]  (Sampling)
+Chain 1: Iteration: 1750 / 2000 [ 87%]  (Sampling)
+Chain 2: Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Chain 1: Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Chain 2: Iteration: 1850 / 2000 [ 92%]  (Sampling)
+Chain 1: Iteration: 1850 / 2000 [ 92%]  (Sampling)
+Chain 2: Iteration: 1900 / 2000 [ 95%]  (Sampling)
+Chain 1: Iteration: 1900 / 2000 [ 95%]  (Sampling)
+Chain 1: Iteration: 1950 / 2000 [ 97%]  (Sampling)
+Chain 2: Iteration: 1950 / 2000 [ 97%]  (Sampling)
+Chain 1: Iteration: 2000 / 2000 [100%]  (Sampling)
+Chain 1: 
+Chain 1:  Elapsed Time: 123.954 seconds (Warm-up)
+Chain 1:                573.078 seconds (Sampling)
+Chain 1:                697.032 seconds (Total)
+Chain 1: 
+Chain 2: Iteration: 2000 / 2000 [100%]  (Sampling)
+Chain 2: 
+Chain 2:  Elapsed Time: 78.132 seconds (Warm-up)
+Chain 2:                623.473 seconds (Sampling)
+Chain 2:                701.605 seconds (Total)
+Chain 2: 
+MRP4 replication 8 
+
+SAMPLING FOR MODEL 'bernoulli' NOW (CHAIN 1).
+Chain 1: 
+Chain 1: Gradient evaluation took 0.004839 seconds
+Chain 1: 1000 transitions using 10 leapfrog steps per transition would take 48.39 seconds.
+Chain 1: Adjust your expectations accordingly!
+Chain 1: 
+Chain 1: 
+
+SAMPLING FOR MODEL 'bernoulli' NOW (CHAIN 2).
+Chain 2: 
+Chain 2: Gradient evaluation took 0.004636 seconds
+Chain 2: 1000 transitions using 10 leapfrog steps per transition would take 46.36 seconds.
+Chain 2: Adjust your expectations accordingly!
+Chain 2: 
+Chain 2: 
+Chain 1: Iteration:    1 / 2000 [  0%]  (Warmup)
+Chain 2: Iteration:    1 / 2000 [  0%]  (Warmup)
+Chain 2: Iteration:   50 / 2000 [  2%]  (Warmup)
+Chain 1: Iteration:   50 / 2000 [  2%]  (Warmup)
+Chain 2: Iteration:  100 / 2000 [  5%]  (Warmup)
+Chain 1: Iteration:  100 / 2000 [  5%]  (Warmup)
+Chain 2: Iteration:  150 / 2000 [  7%]  (Warmup)
+Chain 2: Iteration:  200 / 2000 [ 10%]  (Warmup)
+Chain 1: Iteration:  150 / 2000 [  7%]  (Warmup)
+Chain 2: Iteration:  250 / 2000 [ 12%]  (Warmup)
+Chain 2: Iteration:  251 / 2000 [ 12%]  (Sampling)
+Chain 1: Iteration:  200 / 2000 [ 10%]  (Warmup)
+Chain 1: Iteration:  250 / 2000 [ 12%]  (Warmup)
+Chain 1: Iteration:  251 / 2000 [ 12%]  (Sampling)
+Chain 2: Iteration:  300 / 2000 [ 15%]  (Sampling)
+Chain 1: Iteration:  300 / 2000 [ 15%]  (Sampling)
+Chain 1: Iteration:  350 / 2000 [ 17%]  (Sampling)
+Chain 2: Iteration:  350 / 2000 [ 17%]  (Sampling)
+Chain 1: Iteration:  400 / 2000 [ 20%]  (Sampling)
+Chain 1: Iteration:  450 / 2000 [ 22%]  (Sampling)
+Chain 2: Iteration:  400 / 2000 [ 20%]  (Sampling)
+Chain 1: Iteration:  500 / 2000 [ 25%]  (Sampling)
+Chain 1: Iteration:  550 / 2000 [ 27%]  (Sampling)
+Chain 2: Iteration:  450 / 2000 [ 22%]  (Sampling)
+Chain 1: Iteration:  600 / 2000 [ 30%]  (Sampling)
+Chain 1: Iteration:  650 / 2000 [ 32%]  (Sampling)
+Chain 2: Iteration:  500 / 2000 [ 25%]  (Sampling)
+Chain 1: Iteration:  700 / 2000 [ 35%]  (Sampling)
+Chain 2: Iteration:  550 / 2000 [ 27%]  (Sampling)
+Chain 1: Iteration:  750 / 2000 [ 37%]  (Sampling)
+Chain 1: Iteration:  800 / 2000 [ 40%]  (Sampling)
+Chain 2: Iteration:  600 / 2000 [ 30%]  (Sampling)
+Chain 1: Iteration:  850 / 2000 [ 42%]  (Sampling)
+Chain 1: Iteration:  900 / 2000 [ 45%]  (Sampling)
+Chain 2: Iteration:  650 / 2000 [ 32%]  (Sampling)
+Chain 1: Iteration:  950 / 2000 [ 47%]  (Sampling)
+Chain 1: Iteration: 1000 / 2000 [ 50%]  (Sampling)
+Chain 2: Iteration:  700 / 2000 [ 35%]  (Sampling)
+Chain 1: Iteration: 1050 / 2000 [ 52%]  (Sampling)
+Chain 2: Iteration:  750 / 2000 [ 37%]  (Sampling)
+Chain 1: Iteration: 1100 / 2000 [ 55%]  (Sampling)
+Chain 1: Iteration: 1150 / 2000 [ 57%]  (Sampling)
+Chain 2: Iteration:  800 / 2000 [ 40%]  (Sampling)
+Chain 1: Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Chain 1: Iteration: 1250 / 2000 [ 62%]  (Sampling)
+Chain 2: Iteration:  850 / 2000 [ 42%]  (Sampling)
+Chain 1: Iteration: 1300 / 2000 [ 65%]  (Sampling)
+Chain 2: Iteration:  900 / 2000 [ 45%]  (Sampling)
+Chain 1: Iteration: 1350 / 2000 [ 67%]  (Sampling)
+Chain 1: Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Chain 2: Iteration:  950 / 2000 [ 47%]  (Sampling)
+Chain 1: Iteration: 1450 / 2000 [ 72%]  (Sampling)
+Chain 1: Iteration: 1500 / 2000 [ 75%]  (Sampling)
+Chain 2: Iteration: 1000 / 2000 [ 50%]  (Sampling)
+Chain 1: Iteration: 1550 / 2000 [ 77%]  (Sampling)
+Chain 1: Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Chain 2: Iteration: 1050 / 2000 [ 52%]  (Sampling)
+Chain 1: Iteration: 1650 / 2000 [ 82%]  (Sampling)
+Chain 2: Iteration: 1100 / 2000 [ 55%]  (Sampling)
+Chain 1: Iteration: 1700 / 2000 [ 85%]  (Sampling)
+Chain 1: Iteration: 1750 / 2000 [ 87%]  (Sampling)
+Chain 2: Iteration: 1150 / 2000 [ 57%]  (Sampling)
+Chain 1: Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Chain 1: Iteration: 1850 / 2000 [ 92%]  (Sampling)
+Chain 2: Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Chain 1: Iteration: 1900 / 2000 [ 95%]  (Sampling)
+Chain 1: Iteration: 1950 / 2000 [ 97%]  (Sampling)
+Chain 2: Iteration: 1250 / 2000 [ 62%]  (Sampling)
+Chain 1: Iteration: 2000 / 2000 [100%]  (Sampling)
+Chain 1: 
+Chain 1:  Elapsed Time: 137.495 seconds (Warm-up)
+Chain 1:                612.194 seconds (Sampling)
+Chain 1:                749.689 seconds (Total)
+Chain 1: 
+Chain 2: Iteration: 1300 / 2000 [ 65%]  (Sampling)
+Chain 2: Iteration: 1350 / 2000 [ 67%]  (Sampling)
+Chain 2: Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Chain 2: Iteration: 1450 / 2000 [ 72%]  (Sampling)
+Chain 2: Iteration: 1500 / 2000 [ 75%]  (Sampling)
+Chain 2: Iteration: 1550 / 2000 [ 77%]  (Sampling)
+Chain 2: Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Chain 2: Iteration: 1650 / 2000 [ 82%]  (Sampling)
+Chain 2: Iteration: 1700 / 2000 [ 85%]  (Sampling)
+Chain 2: Iteration: 1750 / 2000 [ 87%]  (Sampling)
+Chain 2: Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Chain 2: Iteration: 1850 / 2000 [ 92%]  (Sampling)
+Chain 2: Iteration: 1900 / 2000 [ 95%]  (Sampling)
+Chain 2: Iteration: 1950 / 2000 [ 97%]  (Sampling)
+Chain 2: Iteration: 2000 / 2000 [100%]  (Sampling)
+Chain 2: 
+Chain 2:  Elapsed Time: 118.971 seconds (Warm-up)
+Chain 2:                1071.7 seconds (Sampling)
+Chain 2:                1190.67 seconds (Total)
+Chain 2: 
+MRP4 replication 9 
+
+SAMPLING FOR MODEL 'bernoulli' NOW (CHAIN 1).
+Chain 1: 
+Chain 1: Gradient evaluation took 0.004672 seconds
+Chain 1: 1000 transitions using 10 leapfrog steps per transition would take 46.72 seconds.
+Chain 1: 
+Adjust your expectations accordingly!SAMPLING
+ FOR MODEL 'Chain bernoulli1' NOW (CHAIN : 2
+).
+Chain 1: 
+Chain 2: 
+Chain 2: Gradient evaluation took 0.00471 seconds
+Chain 2: 1000 transitions using 10 leapfrog steps per transition would take 47.1 seconds.
+Chain 2: Adjust your expectations accordingly!
+Chain 2: 
+Chain 2: 
+Chain 1: Iteration:    1 / 2000 [  0%]  (Warmup)
+Chain 2: Iteration:    1 / 2000 [  0%]  (Warmup)
+Chain 1: Iteration:   50 / 2000 [  2%]  (Warmup)
+Chain 2: Iteration:   50 / 2000 [  2%]  (Warmup)
+Chain 1: Iteration:  100 / 2000 [  5%]  (Warmup)
+Chain 2: Iteration:  100 / 2000 [  5%]  (Warmup)
+Chain 1: Iteration:  150 / 2000 [  7%]  (Warmup)
+Chain 2: Iteration:  150 / 2000 [  7%]  (Warmup)
+Chain 1: Iteration:  200 / 2000 [ 10%]  (Warmup)
+Chain 2: Iteration:  200 / 2000 [ 10%]  (Warmup)
+Chain 1: Iteration:  250 / 2000 [ 12%]  (Warmup)
+Chain 1: Iteration:  251 / 2000 [ 12%]  (Sampling)
+Chain 2: Iteration:  250 / 2000 [ 12%]  (Warmup)
+Chain 2: Iteration:  251 / 2000 [ 12%]  (Sampling)
+Chain 1: Iteration:  300 / 2000 [ 15%]  (Sampling)
+Chain 2: Iteration:  300 / 2000 [ 15%]  (Sampling)
+Chain 1: Iteration:  350 / 2000 [ 17%]  (Sampling)
+Chain 2: Iteration:  350 / 2000 [ 17%]  (Sampling)
+Chain 1: Iteration:  400 / 2000 [ 20%]  (Sampling)
+Chain 2: Iteration:  400 / 2000 [ 20%]  (Sampling)
+Chain 1: Iteration:  450 / 2000 [ 22%]  (Sampling)
+Chain 1: Iteration:  500 / 2000 [ 25%]  (Sampling)
+Chain 2: Iteration:  450 / 2000 [ 22%]  (Sampling)
+Chain 1: Iteration:  550 / 2000 [ 27%]  (Sampling)
+Chain 2: Iteration:  500 / 2000 [ 25%]  (Sampling)
+Chain 1: Iteration:  600 / 2000 [ 30%]  (Sampling)
+Chain 2: Iteration:  550 / 2000 [ 27%]  (Sampling)
+Chain 1: Iteration:  650 / 2000 [ 32%]  (Sampling)
+Chain 2: Iteration:  600 / 2000 [ 30%]  (Sampling)
+Chain 1: Iteration:  700 / 2000 [ 35%]  (Sampling)
+Chain 2: Iteration:  650 / 2000 [ 32%]  (Sampling)
+Chain 1: Iteration:  750 / 2000 [ 37%]  (Sampling)
+Chain 2: Iteration:  700 / 2000 [ 35%]  (Sampling)
+Chain 1: Iteration:  800 / 2000 [ 40%]  (Sampling)
+Chain 2: Iteration:  750 / 2000 [ 37%]  (Sampling)
+Chain 1: Iteration:  850 / 2000 [ 42%]  (Sampling)
+Chain 2: Iteration:  800 / 2000 [ 40%]  (Sampling)
+Chain 1: Iteration:  900 / 2000 [ 45%]  (Sampling)
+Chain 2: Iteration:  850 / 2000 [ 42%]  (Sampling)
+Chain 1: Iteration:  950 / 2000 [ 47%]  (Sampling)
+Chain 2: Iteration:  900 / 2000 [ 45%]  (Sampling)
+Chain 1: Iteration: 1000 / 2000 [ 50%]  (Sampling)
+Chain 2: Iteration:  950 / 2000 [ 47%]  (Sampling)
+Chain 1: Iteration: 1050 / 2000 [ 52%]  (Sampling)
+Chain 2: Iteration: 1000 / 2000 [ 50%]  (Sampling)
+Chain 1: Iteration: 1100 / 2000 [ 55%]  (Sampling)
+Chain 2: Iteration: 1050 / 2000 [ 52%]  (Sampling)
+Chain 1: Iteration: 1150 / 2000 [ 57%]  (Sampling)
+Chain 2: Iteration: 1100 / 2000 [ 55%]  (Sampling)
+Chain 1: Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Chain 2: Iteration: 1150 / 2000 [ 57%]  (Sampling)
+Chain 1: Iteration: 1250 / 2000 [ 62%]  (Sampling)
+Chain 2: Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Chain 1: Iteration: 1300 / 2000 [ 65%]  (Sampling)
+Chain 2: Iteration: 1250 / 2000 [ 62%]  (Sampling)
+Chain 1: Iteration: 1350 / 2000 [ 67%]  (Sampling)
+Chain 2: Iteration: 1300 / 2000 [ 65%]  (Sampling)
+Chain 1: Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Chain 2: Iteration: 1350 / 2000 [ 67%]  (Sampling)
+Chain 1: Iteration: 1450 / 2000 [ 72%]  (Sampling)
+Chain 2: Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Chain 1: Iteration: 1500 / 2000 [ 75%]  (Sampling)
+Chain 2: Iteration: 1450 / 2000 [ 72%]  (Sampling)
+Chain 1: Iteration: 1550 / 2000 [ 77%]  (Sampling)
+Chain 2: Iteration: 1500 / 2000 [ 75%]  (Sampling)
+Chain 1: Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Chain 2: Iteration: 1550 / 2000 [ 77%]  (Sampling)
+Chain 1: Iteration: 1650 / 2000 [ 82%]  (Sampling)
+Chain 2: Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Chain 1: Iteration: 1700 / 2000 [ 85%]  (Sampling)
+Chain 2: Iteration: 1650 / 2000 [ 82%]  (Sampling)
+Chain 1: Iteration: 1750 / 2000 [ 87%]  (Sampling)
+Chain 2: Iteration: 1700 / 2000 [ 85%]  (Sampling)
+Chain 1: Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Chain 2: Iteration: 1750 / 2000 [ 87%]  (Sampling)
+Chain 1: Iteration: 1850 / 2000 [ 92%]  (Sampling)
+Chain 2: Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Chain 1: Iteration: 1900 / 2000 [ 95%]  (Sampling)
+Chain 2: Iteration: 1850 / 2000 [ 92%]  (Sampling)
+Chain 1: Iteration: 1950 / 2000 [ 97%]  (Sampling)
+Chain 2: Iteration: 1900 / 2000 [ 95%]  (Sampling)
+Chain 1: Iteration: 2000 / 2000 [100%]  (Sampling)
+Chain 1: 
+Chain 1:  Elapsed Time: 85.49 seconds (Warm-up)
+Chain 1:                625.511 seconds (Sampling)
+Chain 1:                711.001 seconds (Total)
+Chain 1: 
+Chain 2: Iteration: 1950 / 2000 [ 97%]  (Sampling)
+Chain 2: Iteration: 2000 / 2000 [100%]  (Sampling)
+Chain 2: 
+Chain 2:  Elapsed Time: 102.538 seconds (Warm-up)
+Chain 2:                636.162 seconds (Sampling)
+Chain 2:                738.7 seconds (Total)
+Chain 2: 
+MRP4 replication 10 
+
+SAMPLING FOR MODEL 'bernoulli' NOW (CHAIN 1).
+Chain 1: 
+Chain 1: Gradient evaluation took 0.005339 seconds
+Chain 1: 1000 transitions using 10 leapfrog steps per transition would take 53.39 seconds.
+Chain 1: Adjust your expectations accordingly!
+Chain 1: 
+Chain 1: 
+
+SAMPLING FOR MODEL 'bernoulli' NOW (CHAIN 2).
+Chain 2: 
+Chain 2: Gradient evaluation took 0.005226 seconds
+Chain 2: 1000 transitions using 10 leapfrog steps per transition would take 52.26 seconds.
+Chain 2: Adjust your expectations accordingly!
+Chain 2: 
+Chain 2: 
+Chain 1: Iteration:    1 / 2000 [  0%]  (Warmup)
+Chain 2: Iteration:    1 / 2000 [  0%]  (Warmup)
+Chain 2: Iteration:   50 / 2000 [  2%]  (Warmup)
+Chain 1: Iteration:   50 / 2000 [  2%]  (Warmup)
+Chain 2: Iteration:  100 / 2000 [  5%]  (Warmup)
+Chain 1: Iteration:  100 / 2000 [  5%]  (Warmup)
+Chain 2: Iteration:  150 / 2000 [  7%]  (Warmup)
+Chain 1: Iteration:  150 / 2000 [  7%]  (Warmup)
+Chain 2: Iteration:  200 / 2000 [ 10%]  (Warmup)
+Chain 1: Iteration:  200 / 2000 [ 10%]  (Warmup)
+Chain 2: Iteration:  250 / 2000 [ 12%]  (Warmup)
+Chain 2: Iteration:  251 / 2000 [ 12%]  (Sampling)
+Chain 2: Iteration:  300 / 2000 [ 15%]  (Sampling)
+Chain 2: Iteration:  350 / 2000 [ 17%]  (Sampling)
+Chain 1: Iteration:  250 / 2000 [ 12%]  (Warmup)
+Chain 1: Iteration:  251 / 2000 [ 12%]  (Sampling)
+Chain 2: Iteration:  400 / 2000 [ 20%]  (Sampling)
+Chain 2: Iteration:  450 / 2000 [ 22%]  (Sampling)
+Chain 1: Iteration:  300 / 2000 [ 15%]  (Sampling)
+Chain 2: Iteration:  500 / 2000 [ 25%]  (Sampling)
+Chain 2: Iteration:  550 / 2000 [ 27%]  (Sampling)
+Chain 1: Iteration:  350 / 2000 [ 17%]  (Sampling)
+Chain 2: Iteration:  600 / 2000 [ 30%]  (Sampling)
+Chain 2: Iteration:  650 / 2000 [ 32%]  (Sampling)
+Chain 1: Iteration:  400 / 2000 [ 20%]  (Sampling)
+Chain 2: Iteration:  700 / 2000 [ 35%]  (Sampling)
+Chain 2: Iteration:  750 / 2000 [ 37%]  (Sampling)
+Chain 1: Iteration:  450 / 2000 [ 22%]  (Sampling)
+Chain 2: Iteration:  800 / 2000 [ 40%]  (Sampling)
+Chain 2: Iteration:  850 / 2000 [ 42%]  (Sampling)
+Chain 1: Iteration:  500 / 2000 [ 25%]  (Sampling)
+Chain 2: Iteration:  900 / 2000 [ 45%]  (Sampling)
+Chain 2: Iteration:  950 / 2000 [ 47%]  (Sampling)
+Chain 1: Iteration:  550 / 2000 [ 27%]  (Sampling)
+Chain 2: Iteration: 1000 / 2000 [ 50%]  (Sampling)
+Chain 1: Iteration:  600 / 2000 [ 30%]  (Sampling)
+Chain 2: Iteration: 1050 / 2000 [ 52%]  (Sampling)
+Chain 2: Iteration: 1100 / 2000 [ 55%]  (Sampling)
+Chain 1: Iteration:  650 / 2000 [ 32%]  (Sampling)
+Chain 2: Iteration: 1150 / 2000 [ 57%]  (Sampling)
+Chain 2: Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Chain 1: Iteration:  700 / 2000 [ 35%]  (Sampling)
+Chain 2: Iteration: 1250 / 2000 [ 62%]  (Sampling)
+Chain 2: Iteration: 1300 / 2000 [ 65%]  (Sampling)
+Chain 1: Iteration:  750 / 2000 [ 37%]  (Sampling)
+Chain 2: Iteration: 1350 / 2000 [ 67%]  (Sampling)
+Chain 2: Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Chain 1: Iteration:  800 / 2000 [ 40%]  (Sampling)
+Chain 2: Iteration: 1450 / 2000 [ 72%]  (Sampling)
+Chain 2: Iteration: 1500 / 2000 [ 75%]  (Sampling)
+Chain 1: Iteration:  850 / 2000 [ 42%]  (Sampling)
+Chain 2: Iteration: 1550 / 2000 [ 77%]  (Sampling)
+Chain 2: Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Chain 1: Iteration:  900 / 2000 [ 45%]  (Sampling)
+Chain 2: Iteration: 1650 / 2000 [ 82%]  (Sampling)
+Chain 2: Iteration: 1700 / 2000 [ 85%]  (Sampling)
+Chain 1: Iteration:  950 / 2000 [ 47%]  (Sampling)
+Chain 2: Iteration: 1750 / 2000 [ 87%]  (Sampling)
+Chain 2: Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Chain 1: Iteration: 1000 / 2000 [ 50%]  (Sampling)
+Chain 2: Iteration: 1850 / 2000 [ 92%]  (Sampling)
+Chain 2: Iteration: 1900 / 2000 [ 95%]  (Sampling)
+Chain 1: Iteration: 1050 / 2000 [ 52%]  (Sampling)
+Chain 2: Iteration: 1950 / 2000 [ 97%]  (Sampling)
+Chain 2: Iteration: 2000 / 2000 [100%]  (Sampling)
+Chain 2: 
+Chain 2:  Elapsed Time: 122.653 seconds (Warm-up)
+Chain 2:                628.222 seconds (Sampling)
+Chain 2:                750.875 seconds (Total)
+Chain 2: 
+Chain 1: Iteration: 1100 / 2000 [ 55%]  (Sampling)
+Chain 1: Iteration: 1150 / 2000 [ 57%]  (Sampling)
+Chain 1: Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Chain 1: Iteration: 1250 / 2000 [ 62%]  (Sampling)
+Chain 1: Iteration: 1300 / 2000 [ 65%]  (Sampling)
+Chain 1: Iteration: 1350 / 2000 [ 67%]  (Sampling)
+Chain 1: Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Chain 1: Iteration: 1450 / 2000 [ 72%]  (Sampling)
+Chain 1: Iteration: 1500 / 2000 [ 75%]  (Sampling)
+Chain 1: Iteration: 1550 / 2000 [ 77%]  (Sampling)
+Chain 1: Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Chain 1: Iteration: 1650 / 2000 [ 82%]  (Sampling)
+Chain 1: Iteration: 1700 / 2000 [ 85%]  (Sampling)
+Chain 1: Iteration: 1750 / 2000 [ 87%]  (Sampling)
+Chain 1: Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Chain 1: Iteration: 1850 / 2000 [ 92%]  (Sampling)
+Chain 1: Iteration: 1900 / 2000 [ 95%]  (Sampling)
+Chain 1: Iteration: 1950 / 2000 [ 97%]  (Sampling)
+Chain 1: Iteration: 2000 / 2000 [100%]  (Sampling)
+Chain 1: 
+Chain 1:  Elapsed Time: 161.701 seconds (Warm-up)
+Chain 1:                1235.56 seconds (Sampling)
+Chain 1:                1397.27 seconds (Total)
+Chain 1: 
+There were 29 warnings (use warnings() to see them)
