@@ -1,0 +1,61 @@
+nohup: ignoring input
+── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
+✔ dplyr     1.2.1     ✔ readr     2.2.0
+✔ forcats   1.0.1     ✔ stringr   1.6.0
+✔ ggplot2   4.0.3     ✔ tibble    3.3.1
+✔ lubridate 1.9.5     ✔ tidyr     1.3.2
+✔ purrr     1.2.2     
+── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+✖ dplyr::filter() masks stats::filter()
+✖ dplyr::lag()    masks stats::lag()
+ℹ Use the conflicted package (<http://conflicted.r-lib.org/>) to force all conflicts to become errors
+Sampling replication 1 
+Sampling replication 2 
+Sampling replication 3 
+Sampling replication 4 
+Sampling replication 5 
+Sampling replication 6 
+Sampling replication 7 
+Sampling replication 8 
+Sampling replication 9 
+Sampling replication 10 
+Sampling replication 11 
+Sampling replication 12 
+Sampling replication 13 
+Sampling replication 14 
+Sampling replication 15 
+Sampling replication 16 
+Sampling replication 17 
+Sampling replication 18 
+Sampling replication 19 
+Sampling replication 20 
+Sampling replication 21 
+Sampling replication 22 
+Sampling replication 23 
+Sampling replication 24 
+Sampling replication 25 
+Sampling replication 26 
+Sampling replication 27 
+Sampling replication 28 
+Sampling replication 29 
+Sampling replication 30 
+Sampling replication 31 
+Sampling replication 32 
+Sampling replication 33 
+Sampling replication 34 
+Sampling replication 35 
+Sampling replication 36 
+Sampling replication 37 
+Sampling replication 38 
+Sampling replication 39 
+Sampling replication 40 
+Sampling replication 41 
+Sampling replication 42 
+Sampling replication 43 
+Sampling replication 44 
+Sampling replication 45 
+Sampling replication 46 
+Sampling replication 47 
+Sampling replication 48 
+Sampling replication 49 
+Sampling replication 50 
