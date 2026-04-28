@@ -7,7 +7,7 @@ options(mc.cores = detectCores(logical = FALSE))
 
 set.seed(123)
 
-B = 25
+B = 10
 rep_start = 1
 rep_end = B
 
