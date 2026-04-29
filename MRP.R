@@ -18,8 +18,10 @@ iter = 2000
 warmup = 250
 n_draws = 1000
 
+
 if (!dir.exists("results/mrp")) dir.create("results/mrp", recursive = TRUE)
 if (!dir.exists("results/mrp2")) dir.create("results/mrp2", recursive = TRUE)
+if (!dir.exists("results/mrp2.1")) dir.create("results/mrp2.1", recursive = TRUE)
 if (!dir.exists("results/mrp3")) dir.create("results/mrp3", recursive = TRUE)
 if (!dir.exists("results/mrp4")) dir.create("results/mrp4", recursive = TRUE)
 if (!dir.exists("results/mrp5")) dir.create("results/mrp5", recursive = TRUE)
@@ -286,6 +288,104 @@ for (b in reps) {
   
   write_rds(mrp2_estimates, "results/mrp2/estimates.rds")
   write_csv(mrp2_estimates, "results/mrp2/estimates.csv")
+}
+
+# MRP2.1: old MRP2 structure under new Sun-style weighting
+for (b in reps) {
+  
+  if (!(b %in% hps_sample_ids$replication)) {
+    cat("Skipping MRP2.1 replication", b, ": sample ids not found\n")
+    next
+  }
+  
+  if (file.exists("results/mrp2.1/estimates.rds")) {
+    old_mrp2_1_estimates = read_rds("results/mrp2.1/estimates.rds")
+    
+    if (b %in% old_mrp2_1_estimates$replication) {
+      cat("Skipping MRP2.1 replication", b, ": already in estimates\n")
+      next
+    }
+  }
+  
+  cat("MRP2.1 replication", b, "\n")
+  
+  ids_b = hps_sample_ids %>%
+    filter(replication==b) %>%
+    select(SCRAM, pik, sun_w)
+  
+  hps_sample = hps_population %>%
+    inner_join(ids_b, by = "SCRAM") %>%
+    mutate(
+      state = factor(state, levels = states),
+      age_group = factor(age_group, levels = age_levels),
+      sex = factor(sex, levels = sex_levels),
+      race_eth = factor(race_eth, levels = race_levels),
+      age_race = factor(age_race, levels = age_race_levels),
+      state_race = factor(state_race, levels = state_race_levels),
+      sex_race = factor(sex_race, levels = sex_race_levels),
+      age_sex = factor(age_sex, levels = age_sex_levels),
+      model_w = length(sun_w)*sun_w/sum(sun_w)
+    )
+  
+  mrp2_1_fit = stan_glmer(
+    y ~ (1|age_group)+(1|sex)+(1|race_eth)+(1|state)+(1|age_race)+(1|state_race),
+    family = binomial(link = "logit"),
+    data = hps_sample,
+    weights = model_w,
+    chains = chains,
+    iter = iter,
+    warmup = warmup,
+    refresh = 50,
+    seed = 222324+b
+  )
+  
+  mrp2_1_draws = posterior_epred(
+    mrp2_1_fit,
+    newdata = poststrat_cells,
+    draws = n_draws,
+    allow_new_levels = TRUE
+  )
+  
+  mrp2_1_state_estimates = tibble()
+  
+  for (s in states) {
+    idx = poststrat_cells$state==s
+    N_state = poststrat_cells$N_target[idx]
+    theta_draw = as.numeric(mrp2_1_draws[,idx,drop = FALSE] %*% (N_state/sum(N_state)))
+    
+    mrp2_1_state_estimates = bind_rows(
+      mrp2_1_state_estimates,
+      tibble(
+        state = factor(s, levels = states),
+        theta_hat = mean(theta_draw),
+        lower = quantile(theta_draw,0.025),
+        upper = quantile(theta_draw,0.975)
+      )
+    )
+  }
+  
+  mrp2_1_estimates_b = mrp2_1_state_estimates %>%
+    mutate(
+      method = "MRP2.1",
+      replication = b
+    ) %>%
+    select(replication, method, state, theta_hat, lower, upper)
+  
+  saveRDS(mrp2_1_fit, paste0("results/mrp2.1/fit_rep", b, ".rds"))
+  
+  if (file.exists("results/mrp2.1/estimates.rds")) {
+    old_mrp2_1_estimates = read_rds("results/mrp2.1/estimates.rds")
+    
+    mrp2_1_estimates = old_mrp2_1_estimates %>%
+      filter(replication!=b) %>%
+      bind_rows(mrp2_1_estimates_b) %>%
+      arrange(replication, state)
+  } else {
+    mrp2_1_estimates = mrp2_1_estimates_b
+  }
+  
+  write_rds(mrp2_1_estimates, "results/mrp2.1/estimates.rds")
+  write_csv(mrp2_1_estimates, "results/mrp2.1/estimates.csv")
 }
 
 # MRP3
