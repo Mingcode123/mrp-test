@@ -3,7 +3,7 @@ library(sampling)
 
 set.seed(123)
 
-B = 50
+B = 100
 
 if (!dir.exists("results")) dir.create("results", recursive = TRUE)
 
