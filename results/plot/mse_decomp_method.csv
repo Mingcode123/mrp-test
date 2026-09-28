@@ -1,0 +1,11 @@
+method,component,value
+HT,Variance component,0.003636260245765425
+HT,Squared bias,3.1161190207283906e-4
+NSB,Variance component,4.078462259228496e-4
+NSB,Squared bias,5.19184379102205e-4
+SB,Variance component,4.228215506830883e-4
+SB,Squared bias,4.316108452713234e-4
+MRP2.1,Variance component,4.4684925066323814e-4
+MRP2.1,Squared bias,4.934229259833927e-4
+MRP4,Variance component,3.911127957428859e-4
+MRP4,Squared bias,5.317601848651458e-4

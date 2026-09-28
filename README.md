@@ -70,43 +70,56 @@ These findings are limited to this dataset and the 10-replication comparison. Fu
 
 ## Repository contents
 
-| File or directory | Purpose                                                      |
-| ----------------- | ------------------------------------------------------------ |
-| `dataCleanHPS.R`  | Clean data and construct poststratification cells and state-level targets |
-| `sampleIds.R`     | Generate repeated samples and their inclusion-probability weights |
-| `MRP.R`           | Fit six MRP specifications and perform state-level poststratification |
-| `sunMethods.R`    | Run HT, NSB, and SB benchmarks                               |
-| `stan/`           | Published Stan definitions used for NSB and SB               |
-| `data/`           | Survey data, processed data, and state adjacency information |
-| `results/`        | Saved estimates and fitted model objects                     |
+| File or directory | Purpose |
+| --- | --- |
+| `dataCleanHPS.R` | Clean data and construct poststratification cells and state-level targets |
+| `sampleIds.R` | Generate repeated samples and their inclusion-probability weights |
+| `MRP.R` | Fit six MRP specifications and perform state-level poststratification |
+| `sunMethods.R` | Run HT, NSB, and SB benchmarks |
+| `plot.R` | Evaluate saved estimates and generate comparison figures and summary tables |
+| `stan/` | Published Stan definitions used for NSB and SB |
+| `data/` | Survey data, processed data, and state adjacency information |
+| `results/` | Saved samples, estimates for all nine methods, and selected fitted model objects |
+| `results/method_chain_runtime.csv` | Recorded Stan chain timings used for computational-cost comparisons |
+| `results/plot/` | Comparison figures and summary tables for the final analysis |
 
 ## Final analysis and repository version
 
-The final report compares the first 10 replications across all nine methods. The current repository also retains extended runs for selected methods, with the main scripts configured for up to 100 replications.
+The final report compares the first 10 replications across all nine methods. The repository includes the saved estimates, plotting script, figures, and summary tables for this comparison.
 
-The saved estimate tables currently contain:
+Extended runs are also retained for selected methods, with the main sampling and fitting scripts configured for up to 100 replications. The saved estimate tables contain:
 
 | Method | Saved replications |
-| ------ | ------------------ |
-| HT     | 100                |
-| NSB    | 100                |
-| SB     | 29                 |
-| MRP2.1 | 50                 |
+| --- | --- |
+| HT | 100 |
+| NSB | 100 |
+| SB | 29 |
+| MRP | 25 |
+| MRP2 | 25 |
+| MRP2.1 | 50 |
+| MRP3 | 16 |
+| MRP4 | 10 |
+| MRP5 | 10 |
 
-For these four methods, the first 10 estimates by replication match those used in the final report. Estimates for the other five MRP specifications, the plotting script, and the complete report materials are not currently included in this repository.
+The plotting script sets `B_eval = 10` and uses replications 1–10 for every method, matching the comparison in the final report. Additional saved replications are not included in the reported findings.
 
 ## Running the workflow
 
-The scripts use R with `tidyverse`, `sampling`, `rstan`, and `rstanarm`. The Stan benchmarks require a working compilation toolchain.
+Run all scripts from the repository root.
 
-Run the scripts from the repository root in this order:
+To regenerate figures and summary tables from the saved results, install `tidyverse` and `maps`, then run `plot.R`. It reads the included processed data, sample IDs, estimate tables in `.rds` format, and recorded chain timings, and writes outputs to `results/plot/`. No model refitting is needed for this step.
+
+To run the sampling and model-fitting workflow, the additional packages are `sampling`, `rstan`, and `rstanarm`. The Stan benchmarks require a working compilation toolchain. Run the scripts in this order:
 
 1. `dataCleanHPS.R`
 2. `sampleIds.R`
 3. `sunMethods.R`
 4. `MRP.R`
+5. `plot.R`
 
 Review `B`, `rep_start`, and `rep_end` before running. The fitting scripts skip replications already present in saved estimate files, so running the current checkout may reuse existing results. For a complete refit, use a separate working copy with fresh result directories.
+
+Runtime comparisons use the supplied `results/method_chain_runtime.csv`. The fitting scripts do not automatically refresh this table; comparisons based on new fits require updated chain timings.
 
 ## Data and model sources
 
